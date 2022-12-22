@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+@layer components {
+  .row {
+    @apply px-4 ;
+  }
+  .button {
+    @apply p-4 inline-block text-white bg-red cursor-pointer
+    rounded-[40px] font-semibold flex items-center justify-center font-semibold;
+  }
+  input {
+    @apply px-2 py-[18px] bg-slate-100 rounded-xl outline-0;
+  }
+  .container-ch {
+    @apply relative pl-8 cursor-pointer;
+  }
+  .container-ch input {
+    @apply hidden;
+  }
+  .checkmark {
+    @apply border-red border-2 rounded-md absolute top-0 left-0 h-[25px] w-[25px];
+  }
+  .container-ch input:checked ~ .checkmark {
+    @apply bg-red;
+  }
+  .checkmark:after {
+    @apply content-[""] absolute;
+  }
+  .container-ch .checkmark:after {
+    @apply left-2 top-1 w-1.5 h-2.5 border-t-0 border-r-[3px] border-b-[3px] border-l-0 border-white rotate-45 ;
+  }
+  .error {
+    @apply text-blue-600 text-4xl;
+  }
+}
