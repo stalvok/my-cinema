@@ -12,16 +12,17 @@
           <img class="h-7 w-7 mt-4 absolute" src="../assets/img/litterM-home.png">
           <AppIcon name="bell" class="w-7 absolute mt-4 mr-6 right-0 h-7 text-white"/>
         </div>
-        <div class="flex flex-col gap-4 row">
-          <div class="flex justify-between">
+        <div class="flex flex-col gap-4">
+          <div class="flex row justify-between">
             <div class="text-lg font-bold">Top 10 Movies This Week</div>
             <div class="text-red-600 font-semibold">See all</div>
           </div>
-          <div class="flex justify-between">
+          <CarouselSlider type-of-array="popularFilms" :items-to-show="2.5"/>
+          <div class="flex row justify-between">
             <div class="text-lg font-bold">New Releases</div>
             <div class="text-red-600 font-semibold">See all</div>
           </div>
-          <CarouselSlider />
+          <CarouselSlider type-of-array="newReleases" :items-to-show="2.5"/>
         </div>
       </div>
     </div>
@@ -49,7 +50,7 @@ export default {
 
 
 div {
- border: 1px solid red;
+
 }
 
 </style>

@@ -1,11 +1,11 @@
 <template>
-  <carousel :items-to-show="2.5">
-    <slide v-for="(slide,index) in newRelease.items" :key="slide">
-      <div class="bg-blue-400 overflow-hidden rounded-3xl relative flex items-center justify-center h-[200px] w-[140px] bg">
+  <carousel :items-to-show="itemsToShow">
+    <slide v-for="(slide,index) in filmsArray[Object.keys(filmsArray)[1]]" :key="slide">
+      <div class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
         <img
-          :src="newRelease.items[index].posterUrlPreview"
+          :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
            alt="film card"
-          class=" w-full h-full"
+          class="w-full h-full"
         >
       </div>
     </slide>
@@ -25,19 +25,24 @@ export default {
   components: { Carousel, Pagination, Slide, Navigation},
   data() {
     return {
-      newRelease: []
+      filmsArray: [],
+      test: 'newReleases'
     }
+  },
+  props: {
+    itemsToShow: Number,
+    typeOfArray: String
   },
   methods: {
     async getNewRelease() {
-        await fetch('./mock/newReleases.json',{
+        await fetch(`./mock/${this.$props.typeOfArray}.json`,{
           headers: {
             'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
             'Content-Type': 'application/json',
           },
         })
           .then(res => res.json())
-          .then(json => this.newRelease = json)
+          .then(json => this.filmsArray = json)
     },
   },
   mounted() {
