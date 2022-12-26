@@ -1,6 +1,6 @@
 <template>
   <carousel :items-to-show="itemsToShow">
-    <slide v-for="(slide,index) in filmsArray[Object.keys(filmsArray)[1]]" :key="slide">
+    <slide v-for="(slide,index) in filmsSlice" :key="slide">
       <div class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
         <img
           :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
@@ -26,12 +26,16 @@ export default {
   data() {
     return {
       filmsArray: [],
-      test: 'newReleases'
+      filmsSlice: [],
     }
   },
   props: {
     itemsToShow: Number,
-    typeOfArray: String
+    typeOfArray: String,
+    maxNumber: {
+      type:String,
+      default: 9999,
+    }
   },
   methods: {
     async getNewRelease() {
@@ -44,9 +48,18 @@ export default {
           .then(res => res.json())
           .then(json => this.filmsArray = json)
     },
+    filmSlice() {
+     this.filmsSlice = this.filmsArray[Object.keys(this.filmsArray)[1]].slice(0,this.maxNumber)
+    }
   },
-  mounted() {
-    this.getNewRelease()
+  computed:{
+
+  },
+ async mounted() {
+   await this.getNewRelease()
+   this.filmSlice()
+
+    console.log(this.filmsSlice)
   },
 }
 </script>

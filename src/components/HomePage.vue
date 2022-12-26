@@ -2,7 +2,7 @@
   <div class="min-h-screen flex bg-[#F4F4F4] items-center">
     <div class="container bg-white mx-auto">
       <div class="flex flex-col gap-6">
-        <div class="relative  row h-[400px]">
+        <div class="relative row h-[400px]">
           <img
             class="absolute left-0 object-cover h-full w-full "
             src="../assets/img/homeArt.jpg"
@@ -17,7 +17,7 @@
             <div class="text-lg font-bold">Top 10 Movies This Week</div>
             <div class="text-red-600 font-semibold">See all</div>
           </div>
-          <CarouselSlider type-of-array="popularFilms" :items-to-show="2.5"/>
+          <CarouselSlider :max-number="10" type-of-array="popularFilms" :items-to-show="2.5"/>
           <div class="flex row justify-between">
             <div class="text-lg font-bold">New Releases</div>
             <div class="text-red-600 font-semibold">See all</div>
@@ -25,6 +25,7 @@
           <CarouselSlider type-of-array="newReleases" :items-to-show="2.5"/>
         </div>
       </div>
+       <MobileNavigation/>
     </div>
   </div>
 </template>
@@ -33,13 +34,13 @@
 
 import 'vue3-carousel/dist/carousel.css'
 import CarouselSlider from "./CarouselSlider.vue";
-
+import MobileNavigation from "./MobileNavigation.vue";
 import AppIcon from "./AppIcon.vue";
 
 export default {
 
   name: "HomePage",
-  components: {AppIcon, CarouselSlider}
+  components: {AppIcon, CarouselSlider,MobileNavigation}
 
 }
 
