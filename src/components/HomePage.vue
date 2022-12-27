@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex bg-[#F4F4F4] items-center">
+  <div class="min-h-screen  flex bg-[#F4F4F4] items-center">
     <div class="container bg-white mx-auto">
       <div class="flex flex-col gap-6">
         <div class="relative row h-[400px]">
@@ -8,24 +8,24 @@
             src="../assets/img/homeArt.jpg"
             alt=""
           >
-          <AppIcon name="search-icon" class="w-7 mt-4 absolute right-0 mr-20 h-7 text-white"/>
+          <AppIcon name="search" class="w-7 mt-4 absolute right-0 mr-20 h-7 text-white"/>
           <img class="h-7 w-7 mt-4 absolute" src="../assets/img/litterM-home.png">
           <AppIcon name="bell" class="w-7 absolute mt-4 mr-6 right-0 h-7 text-white"/>
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex row justify-between">
-            <div class="text-lg font-bold">Top 10 Movies This Week</div>
-            <div class="text-red-600 font-semibold">See all</div>
+            <div class="text-lg font-bold">Top 10 Popular Movies This Week</div>
+            <router-link to="/popularFilms"><div class="text-red font-semibold">See all</div></router-link>
           </div>
           <CarouselSlider :max-number="10" type-of-array="popularFilms" :items-to-show="2.5"/>
           <div class="flex row justify-between">
             <div class="text-lg font-bold">New Releases</div>
-            <div class="text-red-600 font-semibold">See all</div>
+            <routerLink to="/releases"><div class="text-red font-semibold">See all</div></routerLink>
           </div>
-          <CarouselSlider type-of-array="newReleases" :items-to-show="2.5"/>
+          <CarouselSlider :max-number="20" type-of-array="newReleases" :items-to-show="2.5"/>
         </div>
       </div>
-       <MobileNavigation/>
+       <MobileNavigation class="sticky"/>
     </div>
   </div>
 </template>
@@ -38,10 +38,8 @@ import MobileNavigation from "./MobileNavigation.vue";
 import AppIcon from "./AppIcon.vue";
 
 export default {
-
   name: "HomePage",
   components: {AppIcon, CarouselSlider,MobileNavigation}
-
 }
 
 

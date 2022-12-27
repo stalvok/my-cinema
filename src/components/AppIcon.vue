@@ -3,7 +3,7 @@
     <svg v-if="name === 'arrow'" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5 7.5L10 12.5L15 7.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <svg v-if="name === 'search-icon'" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg v-if="name === 'search'" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_177_141)">
         <path d="M16.298 16.2981C13.2977 19.2985 8.43306 19.2985 5.43266 16.2981C2.43227 13.2977 2.43227 8.43308 5.43266 5.43269C8.43306 2.4323 13.2977 2.4323 16.298 5.43269C19.2984 8.43308 19.2984 13.2977 16.298 16.2981ZM16.298 16.2981L19.6935 19.6935" stroke="#9395A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </g>

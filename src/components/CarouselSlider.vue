@@ -1,12 +1,14 @@
 <template>
   <carousel :items-to-show="itemsToShow">
     <slide v-for="(slide,index) in filmsSlice" :key="slide">
-      <div class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
-        <img
-          :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
-           alt="film card"
-          class="w-full h-full"
-        >
+      <div class="overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
+        <router-link to="/filmView" >
+          <img
+            :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
+             alt="film card"
+            class="w-full h-full"
+          >
+        </router-link>
       </div>
     </slide>
   </carousel>
@@ -34,7 +36,7 @@ export default {
     typeOfArray: String,
     maxNumber: {
       type:String,
-      default: 9999,
+      default: 999,
     }
   },
   methods: {
@@ -58,31 +60,14 @@ export default {
  async mounted() {
    await this.getNewRelease()
    this.filmSlice()
-
-    console.log(this.filmsSlice)
   },
 }
 </script>
 
 <style scoped>
 
-.carousel__item {
-  min-height: 200px;
-  width: 100%;
-  background-color: var(--vc-clr-primary);
-  color: var(--vc-clr-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.carousel__slide {
-  padding: 10px;
-}
 
-.carousel__prev,
-.carousel__next {
-  box-sizing: content-box;
-  border: 5px solid white;
-}
+
+
 </style>

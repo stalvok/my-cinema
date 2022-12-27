@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[88px] shadow-inner rounded-t-2xl flex items-center justify-around row sticky bg-white bottom-0 w-full">
+  <div class="h-[88px] shadow-inner rounded-t-2xl flex items-center justify-around row absolute bg-white bottom-0 w-full">
     <AppIcon name="home" class="w-6 h-6"/>
     <AppIcon name="compass" class="w-6 h-6"/>
     <AppIcon name="bookmark" class="w-6 h-6"/>

@@ -1220,26 +1220,6 @@
       ],
       "duration": 102,
       "premiereRu": "2022-12-29"
-    },
-    {
-      "kinopoiskId": 5235054,
-      "nameRu": "МУЛЬТ в кино. Выпуск №151: Первый в новом году",
-      "nameEn": "",
-      "year": 2022,
-      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5235054.jpg",
-      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5235054.jpg",
-      "countries": [
-        {
-          "country": "Россия"
-        }
-      ],
-      "genres": [
-        {
-          "genre": "мультфильм"
-        }
-      ],
-      "duration": null,
-      "premiereRu": "2022-12-31"
     }
   ]
 }
