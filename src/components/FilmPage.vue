@@ -48,9 +48,12 @@
            </div>
          </div>
        </div>
-       <div class="">
-         <div v-if="!longText1" class="">{{description}}...<span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1">View more</span></div>
+       <div>
+         <div v-if="!longText1">{{description}}...<span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1">View more</span></div>
          <div v-if="longText1">{{currentFilm.description}} <span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1"> Hide</span></div>
+       </div>
+       <div class="w-full">
+          <FilmParameters/>
        </div>
      </div>
      </div>
@@ -61,15 +64,17 @@
 
 <script>
 
+import FilmParameters from "./FilmParameters.vue";
 import AppIcon from "./AppIcon.vue";
 
 export default {
-  components: {AppIcon},
+  components: {AppIcon,FilmParameters},
   name: "FilmPage",
   data() {
     return {
       currentFilm:'',
       description:'',
+      currentTrailers: '',
       longText1: false,
       currentGenres:[]
     }
@@ -92,7 +97,7 @@ export default {
     },
     longText(text) {
       this.description = text.slice(0 ,100)
-    }
+    },
   },
   computed: {
 
