@@ -12,7 +12,13 @@
   }
   .button {
     @apply p-4 inline-block text-white bg-red cursor-pointer
-    rounded-[40px] font-semibold flex items-center justify-center font-semibold;
+    rounded-[40px] font-semibold flex items-center justify-center;
+    &.outline {
+      @apply bg-white text-red border-2 outline-none border-red;
+    }
+    &.is-small {
+      @apply px-2 py-1 text-sm;
+    }
   }
   input {
     @apply px-2 py-[18px] bg-slate-100 rounded-xl outline-0;
@@ -37,5 +43,14 @@
   }
   .error {
     @apply text-blue-600 text-4xl;
+  }
+  .film-description {
+  @apply flex row flex-col gap-4;
+    & div {
+      @apply text-black font-semibold;
+    }
+    & span {
+      @apply text-red font-semibold;
+    }
   }
 }

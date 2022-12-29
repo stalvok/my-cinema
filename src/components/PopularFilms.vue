@@ -8,24 +8,26 @@
               name="vector"
               class="w-6 h-6 cursor-pointer"
           />
-          <div class="text-lg font-bold">New Releases</div>
+          <div class="text-lg font-bold">Popular Films</div>
         </div>
         <AppIcon name="search" class="w-6 h-6"/>
       </div>
       <div
-          class="grid grid-cols-2 gap-3 justify-items-center"
+        class="grid grid-cols-2 gap-3 justify-items-center"
       >
         <div
-            v-for="(image,index) in filmsArray.films"
+            v-for="(item,index) in filmsArray.films"
             :key="index"
             class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
-          <img
-              :src="filmsArray.films[index].posterUrl"
-              alt="film card"
-              class="w-full h-full"
-          >
-          {{image}}
+          <router-link :to="`/film/${item.filmId}`">
+            <img
+                :src="item.posterUrl"
+                alt="film card"
+                class="w-full h-full"
+            >
+            {{item}}
+          </router-link>
         </div>
       </div>
     </div>

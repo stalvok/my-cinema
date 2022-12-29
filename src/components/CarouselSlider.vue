@@ -2,13 +2,11 @@
   <carousel :items-to-show="itemsToShow">
     <slide v-for="(slide,index) in filmsSlice" :key="slide">
       <div class="overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
-        <router-link to="/filmView" >
           <img
             :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
              alt="film card"
             class="w-full h-full"
           >
-        </router-link>
       </div>
     </slide>
   </carousel>

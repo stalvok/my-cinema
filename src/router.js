@@ -13,6 +13,6 @@ export default createRouter( {
     {path: '/home',component: HomePage},
     {path: '/releases',component: ReleasesPage},
     {path: '/popularFilms',component: PopularFilms},
-    {path: '/filmView',component: FilmPage},
+    {path: '/film/:id',component: FilmPage ,linkActiveClass: 'is-link-active', linkExactActiveClass: 'is-exact-active'},
   ]
 })

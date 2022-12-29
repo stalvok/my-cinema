@@ -1,0 +1,63 @@
+{
+  "kinopoiskId": 505898,
+  "imdbId": "tt1630029",
+  "nameRu": "Аватар: Путь воды",
+  "nameEn": null,
+  "nameOriginal": "Avatar: The Way of Water",
+  "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/505898.jpg",
+  "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/505898.jpg",
+  "coverUrl": null,
+  "logoUrl": null,
+  "reviewsCount": 0,
+  "ratingGoodReview": null,
+  "ratingGoodReviewVoteCount": 0,
+  "ratingKinopoisk": 7.9,
+  "ratingKinopoiskVoteCount": 11341,
+  "ratingImdb": 8,
+  "ratingImdbVoteCount": 111850,
+  "ratingFilmCritics": 7.1,
+  "ratingFilmCriticsVoteCount": 375,
+  "ratingAwait": 91,
+  "ratingAwaitCount": 225728,
+  "ratingRfCritics": null,
+  "ratingRfCriticsVoteCount": 0,
+  "webUrl": "https://www.kinopoisk.ru/film/505898/",
+  "year": 2022,
+  "filmLength": 192,
+  "slogan": null,
+  "description": "После принятия образа аватара солдат Джейк Салли становится предводителем народа на'ви и берет на себя миссию по защите новых друзей от корыстных бизнесменов с Земли. Теперь ему есть за кого бороться — с Джейком его прекрасная возлюбленная Нейтири. Когда на Пандору возвращаются до зубов вооруженные земляне, Джейк готов дать им отпор.",
+  "shortDescription": null,
+  "editorAnnotation": null,
+  "isTicketsAvailable": false,
+  "productionStatus": null,
+  "type": "FILM",
+  "ratingMpaa": "pg13",
+  "ratingAgeLimits": null,
+  "countries": [
+    {
+      "country": "США"
+    }
+  ],
+  "genres": [
+    {
+      "genre": "фантастика"
+    },
+    {
+      "genre": "приключения"
+    },
+    {
+      "genre": "боевик"
+    },
+    {
+      "genre": "фэнтези"
+    }
+  ],
+  "startYear": null,
+  "endYear": null,
+  "serial": false,
+  "shortFilm": false,
+  "completed": false,
+  "hasImax": false,
+  "has3D": false,
+  "lastSync": "2022-12-26T14:29:41.305352"
+}

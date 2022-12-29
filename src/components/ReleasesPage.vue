@@ -16,16 +16,17 @@
         class="grid grid-cols-2 gap-3 justify-items-center"
       >
         <div
-          v-for="(image,index) in filmsArray.items"
+          v-for="(item,index) in filmsArray.items"
           :key="index"
           class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
-          <img
-            :src="filmsArray.items[index].posterUrl"
-            alt="film card"
-            class="w-full h-full"
-          >
-          {{image}}
+          <router-link :to="`/film/${item.kinopoiskId}`">
+            <img
+              :src="filmsArray.items[index].posterUrl"
+              alt="film card"
+              class="w-full h-full"
+            >
+          </router-link>
         </div>
       </div>
     </div>
