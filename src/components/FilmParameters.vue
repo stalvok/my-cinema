@@ -1,12 +1,9 @@
 <template>
   <div class="flex flex-col gap-4">
     <div class="flex text-lg font-medium text-slate-400 justify-around">
-      <div @click="changeCategoryAwards" :class="{'text-red': selectFilmAwards}" class="cursor-pointer">Awards</div>
-      <div @click="changeCategorySameFilms" :class="{'text-red': selectSameFilms}" class="cursor-pointer">More Like This</div>
-      <div @click="changeCategoryselect" :class="{'text-red': selectFilmActors}" class="cursor-pointer">Cast</div>
-    </div>
-    <div class="w-full rounded-xl bg-slate-300 py-0.5">
-      <div class="w-[50%] h-full bg-red"></div>
+      <div @click="changeCategoryAwards" :class="{'text-red underline underline-offset-8': selectFilmAwards}" class="duration-300 cursor-pointer">Awards</div>
+      <div @click="changeCategorySameFilms" :class="{'text-red underline underline-offset-8': selectSameFilms}" class="duration-300 cursor-pointer">More Like This</div>
+      <div @click="changeCategoryselect" :class="{'text-red underline underline-offset-8': selectFilmActors}" class="duration-300 cursor-pointer">Cast</div>
     </div>
     <div v-show="selectSameFilms" class="w-full grid grid-cols-2 gap-3 justify-items-center">
       <div
@@ -64,19 +61,19 @@ export default {
   },
   methods: {
     changeCategoryAwards() {
-      this.selectFilmAwards = ! this.selectFilmAwards
+      this.selectFilmAwards = true
       this.selectSameFilms = false
       this.selectFilmActors = false
     },
     changeCategorySameFilms() {
       this.selectFilmAwards = false
-      this.selectSameFilms = !this.selectSameFilms
+      this.selectSameFilms = true
       this.selectFilmActors = false
     },
     changeCategoryselect() {
       this.selectFilmAwards = false
       this.selectSameFilms = false
-      this.selectFilmActors = !this.selectFilmActors
+      this.selectFilmActors = true
     },
     async getSameFilms() {
       await fetch(`./mock/sameFilms.json`, {

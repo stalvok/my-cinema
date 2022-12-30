@@ -45,6 +45,9 @@ module.exports = {
           'monospace'
         ]
       },
+      animation: {
+        loader: 'loader 1.1s linear infinite'
+      },
     },
   },
   plugins: [],

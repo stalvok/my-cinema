@@ -1,6 +1,7 @@
 <template>
   <div class="min-h-screen flex  flex-col bg-[#F4F4F4]">
-    <div class="container py-12 bg-white row flex-col gap-10 flex mx-auto">
+    <PageLoader v-if="filmsArray === ''"/>
+    <div v-if="filmsArray !== '5'" class="container py-12 bg-white row flex-col gap-10 flex mx-auto">
       <div class="w-full flex items-center justify-between">
         <div class="flex gap-4 items-center">
           <AppIcon
@@ -40,9 +41,10 @@
 
 import AppIcon from "./AppIcon.vue";
 import MobileNavigation from "./MobileNavigation.vue";
+import PageLoader from "./PageLoader.vue";
 
 export default {
-  components: {AppIcon,MobileNavigation},
+  components: {AppIcon,MobileNavigation,PageLoader},
   name: "ReleasesPage",
   data() {
     return {

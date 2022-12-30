@@ -1,6 +1,9 @@
 <template>
- <div class="min-h-screen flex bg-[#F4F4F4]">
-   <div class="container bg-white mx-auto">
+ <div  class="min-h-screen flex bg-[#F4F4F4]">
+   <div
+     v-if="currentFilm !== ''"
+     class="container bg-white mx-auto"
+   >
      <div class="flex flex-col mt-2 gap-4 sm:flex-row">
        <div class="relative row flex h-[560px] justify-center w-full">
          <div class="relative">
@@ -16,7 +19,7 @@
            />
          </div>
        </div>
-     <div class="flex flex-col gap-4 row sm:flex-row items-center justify-center">
+     <div class="flex flex-col gap-4 row sm:flex-row items-start justify-center">
        <div class="text-3xl font-bold">{{currentFilm.nameOriginal}}</div>
        <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
          <div class="button uppercase outline is-link-active is-exact-active is-small">
@@ -37,7 +40,7 @@
          </div>
        </div>
        <div class="flex gap-2 font-semibold ">
-         <div>Genre:</div>
+         <div>Genres:</div>
          <div class="flex-1 flex flex-wrap gap-1">
            <div
              v-for="genre in this.currentGenres"
@@ -49,8 +52,15 @@
          </div>
        </div>
        <div>
-         <div v-if="!longText1">{{description}}...<span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1">View more</span></div>
-         <div v-if="longText1">{{currentFilm.description}} <span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1"> Hide</span></div>
+         <div v-if="!longText1">{{description}}...
+           <span class="text-red text-lg cursor-pointer font-semibold" @click="longText1=!longText1">View more</span>
+         </div>
+         <div v-if="longText1">{{currentFilm.description}}
+           <span class="text-red text-lg cursor-pointer font-semibold" @click="longText1=!longText1">
+             Hide
+             <AppIcon name="vector" class="w-3 inline-block h-3 text-red rotate-90"/>
+           </span>
+         </div>
        </div>
        <div class="w-full">
           <FilmParameters :film-id="currentFilm.kinopoiskId"/>
@@ -58,6 +68,7 @@
      </div>
      </div>
    </div>
+   <PageLoader v-if="currentFilm === ''"/>
  </div>
 
 </template>
@@ -66,9 +77,10 @@
 
 import FilmParameters from "./FilmParameters.vue";
 import AppIcon from "./AppIcon.vue";
+import PageLoader from "./PageLoader.vue";
 
 export default {
-  components: {AppIcon,FilmParameters},
+  components: {AppIcon,FilmParameters,PageLoader},
   name: "FilmPage",
   data() {
     return {
