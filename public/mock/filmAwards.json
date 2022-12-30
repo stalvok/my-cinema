@@ -1,0 +1,100 @@
+{
+  "total": 4,
+  "items": [
+    {
+      "name": "Премия канала «MTV»",
+      "win": true,
+      "imageUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/13084667-cb12-4a63-8a6b-090403b0c90e/orig",
+      "nominationName": "Лучший режиссер-дебютант",
+      "year": 1999,
+      "persons": [
+        {
+          "kinopoiskId": 45159,
+          "webUrl": "https://www.kinopoisk.ru/name/45159/",
+          "nameRu": "Гай Ричи",
+          "nameEn": "Guy Ritchie",
+          "sex": "MALE",
+          "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45159.jpg",
+          "growth": 180,
+          "birthday": "1968-09-10",
+          "death": null,
+          "age": 53,
+          "birthplace": "Хатфилд, Хартвордшир, Англия, Великобритания",
+          "deathplace": null,
+          "profession": "Режиссер, Сценарист, Продюсер"
+        }
+      ]
+    },
+    {
+      "name": "Британская академия",
+      "win": true,
+      "imageUrl": null,
+      "nominationName": "Приз зрительских симпатий",
+      "year": 1999,
+      "persons": []
+    },
+    {
+      "name": "Британская академия",
+      "win": false,
+      "imageUrl": null,
+      "nominationName": "Лучший монтаж",
+      "year": 1999,
+      "persons": [
+        {
+          "kinopoiskId": 1986881,
+          "webUrl": "https://www.kinopoisk.ru/name/1986881/",
+          "nameRu": "Найвен Хоуи",
+          "nameEn": "Niven Howie",
+          "sex": "MALE",
+          "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/1986881.jpg",
+          "growth": null,
+          "birthday": null,
+          "death": null,
+          "age": null,
+          "birthplace": null,
+          "deathplace": null,
+          "profession": "Монтажер, Режиссер"
+        }
+      ]
+    },
+    {
+      "name": "Британская академия",
+      "win": false,
+      "imageUrl": null,
+      "nominationName": "Премия имени Александра Корды за самый выдающийся британский фильм года",
+      "year": 1999,
+      "persons": [
+        {
+          "kinopoiskId": 45159,
+          "webUrl": "https://www.kinopoisk.ru/name/45159/",
+          "nameRu": "Гай Ричи",
+          "nameEn": "Guy Ritchie",
+          "sex": "MALE",
+          "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45159.jpg",
+          "growth": 180,
+          "birthday": "1968-09-10",
+          "death": null,
+          "age": 53,
+          "birthplace": "Хатфилд, Хартвордшир, Англия, Великобритания",
+          "deathplace": null,
+          "profession": "Режиссер, Сценарист, Продюсер"
+        },
+        {
+          "kinopoiskId": 45173,
+          "webUrl": "https://www.kinopoisk.ru/name/45173/",
+          "nameRu": "Мэттью Вон",
+          "nameEn": "Matthew Vaughn",
+          "sex": "MALE",
+          "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45173.jpg",
+          "growth": 178,
+          "birthday": "1971-03-07",
+          "death": null,
+          "age": 51,
+          "birthplace": "Лондон, Англия, Великобритания",
+          "deathplace": null,
+          "profession": "Продюсер, Режиссер, Сценарист"
+        }
+      ]
+    }
+  ]
+}

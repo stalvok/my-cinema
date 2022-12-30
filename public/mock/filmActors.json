@@ -1,0 +1,623 @@
+[
+  {
+    "staffId": 45159,
+    "nameRu": "Гай Ричи",
+    "nameEn": "Guy Ritchie",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45159.jpg",
+    "professionText": "Режиссеры",
+    "professionKey": "DIRECTOR"
+  },
+  {
+    "staffId": 3697,
+    "nameRu": "Джейсон Флеминг",
+    "nameEn": "Jason Flemyng",
+    "description": "Tom",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/3697.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 13180,
+    "nameRu": "Декстер Флетчер",
+    "nameEn": "Dexter Fletcher",
+    "description": "Soap",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/13180.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 4542,
+    "nameRu": "Ник Моран",
+    "nameEn": "Nick Moran",
+    "description": "Eddy",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/4542.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 1514,
+    "nameRu": "Джейсон Стэйтем",
+    "nameEn": "Jason Statham",
+    "description": "Bacon",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/1514.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 23496,
+    "nameRu": "Стивен Макинтош",
+    "nameEn": "Steven Mackintosh",
+    "description": "Winston",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/23496.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 13302,
+    "nameRu": "Николас Роу",
+    "nameEn": "Nicholas Rowe",
+    "description": "J",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/13302.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65018,
+    "nameRu": "Ник Марк",
+    "nameEn": "Nick Marcq",
+    "description": "Charles",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65018.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65019,
+    "nameRu": "Чарльз Форбс",
+    "nameEn": "Charles Forbes",
+    "description": "Willie (в титрах: Charlie Forbes)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65019.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 49131,
+    "nameRu": "Винни Джонс",
+    "nameEn": "Vinnie Jones",
+    "description": "Big Chris",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/49131.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65020,
+    "nameRu": "Ленни МакЛин",
+    "nameEn": "Lenny McLean",
+    "description": "Barry The Baptist",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65020.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 42018,
+    "nameRu": "Питер МакНиколл",
+    "nameEn": "Peter McNicholl",
+    "description": "Little Chris",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/42018.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65021,
+    "nameRu": "П.Х. Мориарти",
+    "nameEn": "P.H. Moriarty",
+    "description": "Hatchet Harry",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65021.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 15005,
+    "nameRu": "Фрэнк Харпер",
+    "nameEn": "Frank Harper",
+    "description": "Dog",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/15005.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65022,
+    "nameRu": "Стив Суини",
+    "nameEn": "Steve Sweeney",
+    "description": "Plank",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65022.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 13148,
+    "nameRu": "Хагги Ливер",
+    "nameEn": "Huggy Leaver",
+    "description": "Paul",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/13148.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 4071,
+    "nameRu": "Ронни Фокс",
+    "nameEn": "Ronnie Fox",
+    "description": "Mickey",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/4071.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65023,
+    "nameRu": "Тони МакМахон",
+    "nameEn": "Tony McMahon",
+    "description": "John",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65023.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 28266,
+    "nameRu": "Стивен Маркус",
+    "nameEn": "Stephen Marcus",
+    "description": "Nick The Greek",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/28266.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 44065,
+    "nameRu": "Вэс Блэквуд",
+    "nameEn": "Vas Blackwood",
+    "description": "Rory Breaker",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/44065.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 4913,
+    "nameRu": "Стинг",
+    "nameEn": "Sting",
+    "description": "JD",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/4913.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 49689,
+    "nameRu": "Джэйк Абрахам",
+    "nameEn": "Jake Abraham",
+    "description": "Dean",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/49689.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 41951,
+    "nameRu": "Роб Брайдон",
+    "nameEn": "Rob Brydon",
+    "description": "Traffic Warden (в титрах: Robert Brydon)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/41951.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65024,
+    "nameRu": "Стивен Каллендер-Феррьер",
+    "nameEn": "Stephen Callender-Ferrier",
+    "description": "Lenny",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65024.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65025,
+    "nameRu": "Стив Коллинз",
+    "nameEn": "Steve Collins",
+    "description": "Boxing Gym Bouncer",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65025.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 16453,
+    "nameRu": "Элвин «Чоппер» Дэвид",
+    "nameEn": "Elwin «Chopper» David",
+    "description": "Nathan",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/16453.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65026,
+    "nameRu": "Вера Дэй",
+    "nameEn": "Vera Day",
+    "description": "Tanya",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65026.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65027,
+    "nameRu": "Джимми Флинт",
+    "nameEn": "Jimmy Flint",
+    "description": "Don",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65027.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 56739,
+    "nameRu": "Алан Форд",
+    "nameEn": "Alan Ford",
+    "description": "Alan / рассказчик",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/56739.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 24530,
+    "nameRu": "Сид Голдер",
+    "nameEn": "Sid Golder",
+    "description": "Phil (в титрах: Sydney Golder)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/24530.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65028,
+    "nameRu": "Алекс Холл",
+    "nameEn": "Alex Hall",
+    "description": "Slick",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65028.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65029,
+    "nameRu": "Джон Хучин",
+    "nameEn": "John Houchin",
+    "description": "Doorman",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65029.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65030,
+    "nameRu": "Дерек Ховард",
+    "nameEn": "Derek Howard",
+    "description": "Policeman",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65030.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 41450,
+    "nameRu": "Дэнни Джон-Джулс",
+    "nameEn": "Danny John-Jules",
+    "description": "Barfly Jack",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/41450.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65031,
+    "nameRu": "Бал Джусар",
+    "nameEn": "Bal Jusar",
+    "description": "Gordon",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65031.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65032,
+    "nameRu": "Тим Морис-Джонс",
+    "nameEn": "Tim Maurice-Jones",
+    "description": "Drowning Man",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65032.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65033,
+    "nameRu": "Виктор МакГуайр",
+    "nameEn": "Victor McGuire",
+    "description": "Gary",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65033.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65034,
+    "nameRu": "Марк Муни",
+    "nameEn": "Mark Mooney",
+    "description": "Serg",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65034.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65035,
+    "nameRu": "Сьюзи Рэтнер",
+    "nameEn": "Suzy Ratner",
+    "description": "Gloria",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65035.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 3708,
+    "nameRu": "Дэвид Рейд",
+    "nameEn": "David Reid",
+    "description": "Samoan Jo (в титрах: David «Disco» Reid)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/3708.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65036,
+    "nameRu": "Грэхэм Стивенс",
+    "nameEn": "Graham Stevens",
+    "description": "Policeman",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65036.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 2286840,
+    "nameRu": "Джеймс Тарбак",
+    "nameEn": "James Tarbuck",
+    "description": "John O'Driscoll",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/2286840.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 3705,
+    "nameRu": "Эндрю Тирнан",
+    "nameEn": "Andrew Tiernan",
+    "description": "Man In Pub (в титрах: Andy Tiernan)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/3705.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 65037,
+    "nameRu": "Ричард Вэнстоун",
+    "nameEn": "Richard Vanstone",
+    "description": "Frazer",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65037.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 45173,
+    "nameRu": "Мэттью Вон",
+    "nameEn": "Matthew Vaughn",
+    "description": "Yuppy In Car",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45173.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 3677029,
+    "nameRu": "",
+    "nameEn": "Donald Hall",
+    "description": "Gangster, в титрах не указан",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/3677029.jpg",
+    "professionText": "Актеры",
+    "professionKey": "ACTOR"
+  },
+  {
+    "staffId": 45173,
+    "nameRu": "Мэттью Вон",
+    "nameEn": "Matthew Vaughn",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45173.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 56780,
+    "nameRu": "Стефен Маркс",
+    "nameEn": "Stephen Marks",
+    "description": "исполнительный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/56780.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 50546,
+    "nameRu": "Джорджия Мастерс",
+    "nameEn": "Georgia Masters",
+    "description": "сопродюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/50546.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 56781,
+    "nameRu": "Питер Мортон",
+    "nameEn": "Peter Morton",
+    "description": "исполнительный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/56781.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 56782,
+    "nameRu": "Энгэд Пол",
+    "nameEn": "Angad Paul",
+    "description": "исполнительный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/56782.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 56783,
+    "nameRu": "Себастьян Пирсон",
+    "nameEn": "Sebastian Pearson",
+    "description": "ассоциированный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/56783.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 65038,
+    "nameRu": "Ян Ролданус",
+    "nameEn": "Jan Roldanus",
+    "description": "ассоциированный продюсер (в титрах не указан)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65038.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 60858,
+    "nameRu": "Джон Слэн",
+    "nameEn": "Jon Slan",
+    "description": "исполнительный продюсер (в титрах не указан)",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/60858.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 4660,
+    "nameRu": "Труди Стайлер",
+    "nameEn": "Trudie Styler",
+    "description": "исполнительный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/4660.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 14914,
+    "nameRu": "Стив Тиш",
+    "nameEn": "Steve Tisch",
+    "description": "исполнительный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/14914.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 45054,
+    "nameRu": "Роналдо  Васконселлос",
+    "nameEn": "Ronaldo Vasconcellos",
+    "description": "линейный продюсер",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45054.jpg",
+    "professionText": "Продюсеры",
+    "professionKey": "PRODUCER"
+  },
+  {
+    "staffId": 178095,
+    "nameRu": "Вячеслав Максаков",
+    "nameEn": "",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/178095.jpg",
+    "professionText": "Режиссеры дубляжа",
+    "professionKey": "VOICE_DIRECTOR"
+  },
+  {
+    "staffId": 2304781,
+    "nameRu": "Алексей Филимончев",
+    "nameEn": "",
+    "description": "IVI",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/2304781.jpg",
+    "professionText": "Режиссеры дубляжа",
+    "professionKey": "VOICE_DIRECTOR"
+  },
+  {
+    "staffId": 6729912,
+    "nameRu": "Сергей Чижков",
+    "nameEn": "",
+    "description": "IVI",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/6729912.jpg",
+    "professionText": "Переводчики",
+    "professionKey": "TRANSLATOR"
+  },
+  {
+    "staffId": 45159,
+    "nameRu": "Гай Ричи",
+    "nameEn": "Guy Ritchie",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/45159.jpg",
+    "professionText": "Сценаристы",
+    "professionKey": "WRITER"
+  },
+  {
+    "staffId": 65032,
+    "nameRu": "Тим Морис-Джонс",
+    "nameEn": "Tim Maurice-Jones",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/65032.jpg",
+    "professionText": "Операторы",
+    "professionKey": "OPERATOR"
+  },
+  {
+    "staffId": 271238,
+    "nameRu": "Дэвид А. Хьюз",
+    "nameEn": "David A. Hughes",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/271238.jpg",
+    "professionText": "Композиторы",
+    "professionKey": "COMPOSER"
+  },
+  {
+    "staffId": 609684,
+    "nameRu": "Джон Мерфи",
+    "nameEn": "John Murphy",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/609684.jpg",
+    "professionText": "Композиторы",
+    "professionKey": "COMPOSER"
+  },
+  {
+    "staffId": 1986004,
+    "nameRu": "Иэн Эндрюс",
+    "nameEn": "Iain Andrews",
+    "description": "постановщик",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/1986004.jpg",
+    "professionText": "Художники",
+    "professionKey": "DESIGN"
+  },
+  {
+    "staffId": 1078099,
+    "nameRu": "Ив Мавракис",
+    "nameEn": "Eve Mavrakis",
+    "description": "постановщик",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/1078099.jpg",
+    "professionText": "Художники",
+    "professionKey": "DESIGN"
+  },
+  {
+    "staffId": 2354684,
+    "nameRu": "Стефани Колли",
+    "nameEn": "Stephanie Collie",
+    "description": "по костюмам",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/2354684.jpg",
+    "professionText": "Художники",
+    "professionKey": "DESIGN"
+  },
+  {
+    "staffId": 3643685,
+    "nameRu": "Джек Хаймэн",
+    "nameEn": "Jac Hyman",
+    "description": "по декорациям",
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/3643685.jpg",
+    "professionText": "Художники",
+    "professionKey": "DESIGN"
+  },
+  {
+    "staffId": 1986881,
+    "nameRu": "Найвен Хоуи",
+    "nameEn": "Niven Howie",
+    "description": null,
+    "posterUrl": "https://kinopoiskapiunofficial.tech/images/actor_posters/kp/1986881.jpg",
+    "professionText": "Монтажеры",
+    "professionKey": "EDITOR"
+  }
+]

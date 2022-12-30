@@ -7,19 +7,19 @@
            <img class="object-center h-full w-full max-w-[480px] drop-shadow-xl rounded-3xl" :src="currentFilm.posterUrl" alt="">
            <AppIcon
              name="vector"
-             class="ml-6 top-4 w-8 h-8 border-0 absolute left-0 top-0 text-white bg-black p-1.5 rounded-full cursor-pointer"
-             @click="$router.go(-1)"
+             class="ml-6 mt-4 w-8 h-8 border-0 absolute left-0 top-0 text-white bg-red p-1.5 rounded-full cursor-pointer"
+             @click="this.$router.push('/home')"
            />
            <AppIcon
               name="plus"
-              class="w-6 h-6 absolute right-0 mr-6 cursor-pointer top-4 fill-white"
+              class="w-8 h-8 bg-red rounded-full absolute right-0 mr-6 cursor-pointer top-4 fill-white"
            />
          </div>
        </div>
      <div class="flex flex-col gap-4 row sm:flex-row items-center justify-center">
        <div class="text-3xl font-bold">{{currentFilm.nameOriginal}}</div>
        <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
-         <div class="button outline is-link-active is-exact-active is-small">
+         <div class="button uppercase outline is-link-active is-exact-active is-small">
            {{currentFilm.ratingMpaa}}
          </div>
          <div class="button outline is-small">
@@ -53,7 +53,7 @@
          <div v-if="longText1">{{currentFilm.description}} <span class="text-red text-xl cursor-pointer font-semibold" @click="longText1=!longText1"> Hide</span></div>
        </div>
        <div class="w-full">
-          <FilmParameters/>
+          <FilmParameters :film-id="currentFilm.kinopoiskId"/>
        </div>
      </div>
      </div>
@@ -116,6 +116,6 @@ export default {
 <style scoped>
 
  div {
- border: 1px solid ;
+
  }
 </style>
