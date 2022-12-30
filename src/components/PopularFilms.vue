@@ -13,22 +13,18 @@
         </div>
         <AppIcon name="search" class="w-6 h-6"/>
       </div>
-      <div
-        class="grid grid-cols-2 gap-3 justify-items-center"
-      >
+      <div class="grid grid-cols-2 gap-3 justify-items-center">
         <div
             v-for="(item,index) in filmsArray.films"
             :key="index"
             class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
-          <router-link :to="`/film/${item.filmId}`">
             <img
-                :src="item.posterUrl"
-                alt="film card"
-                class="w-full h-full"
+              @click="$router.push({ path: '/film/id', query: { id: item.filmId }})"
+              :src="item.posterUrl"
+              alt="film card"
+              class="w-full h-full"
             >
-            {{item}}
-          </router-link>
         </div>
       </div>
     </div>
@@ -53,7 +49,7 @@ export default {
   },
   methods: {
     async getNewRelease() {
-      await fetch(`./mock/popularFilms.json`,{
+      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1`,{
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
           'Content-Type': 'application/json',

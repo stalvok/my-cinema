@@ -53,6 +53,12 @@
       @apply text-red font-semibold;
     }
   }
+  .active-link {
+    @apply text-4xl text-red ;
+    & svg {
+      @apply stroke-red-400;
+    }
+  }
   .loader {
     @apply relative;
     &:before {

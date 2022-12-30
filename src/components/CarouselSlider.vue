@@ -33,7 +33,7 @@ export default {
     itemsToShow: Number,
     typeOfArray: String,
     maxNumber: {
-      type:String,
+      type:Number,
       default: 999,
     }
   },

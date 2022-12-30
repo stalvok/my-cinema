@@ -1,0 +1,550 @@
+{
+  "total": 57,
+  "totalPages": 3,
+  "items": [
+    {
+      "kinopoiskId": 435,
+      "imdbId": "tt0120689",
+      "nameRu": "Зеленая миля",
+      "nameEn": null,
+      "nameOriginal": "The Green Mile",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "ratingKinopoisk": 9.1,
+      "ratingImdb": 8.6,
+      "year": 1999,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/435.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/435.jpg"
+    },
+    {
+      "kinopoiskId": 1108577,
+      "imdbId": "tt6966692",
+      "nameRu": "Зеленая книга",
+      "nameEn": null,
+      "nameOriginal": "Green Book",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Китай"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": 8.4,
+      "ratingImdb": 8.2,
+      "year": 2018,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1108577.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1108577.jpg"
+    },
+    {
+      "kinopoiskId": 806544,
+      "imdbId": "tt2266696",
+      "nameRu": "Зеленая планета",
+      "nameEn": null,
+      "nameOriginal": "Das grüne Wunder - Unser Wald",
+      "countries": [
+        {
+          "country": "Германия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "ratingKinopoisk": 7.9,
+      "ratingImdb": 7.5,
+      "year": 2012,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/806544.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/806544.jpg"
+    },
+    {
+      "kinopoiskId": 55035,
+      "imdbId": "tt0115650",
+      "nameRu": "Прекрасная зеленая",
+      "nameEn": null,
+      "nameOriginal": "La belle verte",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": 7.7,
+      "ratingImdb": 7.2,
+      "year": 1996,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/55035.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/55035.jpg"
+    },
+    {
+      "kinopoiskId": 37939,
+      "imdbId": "tt0094888",
+      "nameRu": "Зеленая кобра",
+      "nameEn": null,
+      "nameOriginal": "Cobra Verde",
+      "countries": [
+        {
+          "country": "Германия (ФРГ)"
+        },
+        {
+          "country": "Гана"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "ratingKinopoisk": 7.1,
+      "ratingImdb": 6.9,
+      "year": 1987,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/37939.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/37939.jpg"
+    },
+    {
+      "kinopoiskId": 45263,
+      "imdbId": "tt0062520",
+      "nameRu": "Зеленая карета",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "СССР"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "ratingKinopoisk": 6.8,
+      "ratingImdb": 6.7,
+      "year": 1967,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/45263.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/45263.jpg"
+    },
+    {
+      "kinopoiskId": 18492,
+      "imdbId": "tt0077315",
+      "nameRu": "Зеленая комната",
+      "nameEn": null,
+      "nameOriginal": "La chambre verte",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "ratingKinopoisk": 6.7,
+      "ratingImdb": 6.9,
+      "year": 1978,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/18492.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/18492.jpg"
+    },
+    {
+      "kinopoiskId": 535301,
+      "imdbId": "tt1663633",
+      "nameRu": "Витрина DC: Зеленая стрела",
+      "nameEn": null,
+      "nameOriginal": "DC Showcase: Green Arrow",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "короткометражка"
+        }
+      ],
+      "ratingKinopoisk": 6.7,
+      "ratingImdb": 7.1,
+      "year": 2010,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/535301.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/535301.jpg"
+    },
+    {
+      "kinopoiskId": 844150,
+      "imdbId": "tt4062536",
+      "nameRu": "Зеленая комната",
+      "nameEn": null,
+      "nameOriginal": "Green Room",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "ratingKinopoisk": 6.6,
+      "ratingImdb": 7,
+      "year": 2015,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/844150.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/844150.jpg"
+    },
+    {
+      "kinopoiskId": 839018,
+      "imdbId": "tt5299638",
+      "nameRu": "Зеленая карета",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "ratingKinopoisk": 6.6,
+      "ratingImdb": 6.2,
+      "year": 2015,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/839018.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/839018.jpg"
+    },
+    {
+      "kinopoiskId": 523319,
+      "imdbId": "tt1667130",
+      "nameRu": "Зеленая волна",
+      "nameEn": null,
+      "nameOriginal": "The Green Wave",
+      "countries": [
+        {
+          "country": "Германия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "ratingKinopoisk": 5.7,
+      "ratingImdb": 7.4,
+      "year": 2010,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/523319.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/523319.jpg"
+    },
+    {
+      "kinopoiskId": 55469,
+      "imdbId": "tt0064393",
+      "nameRu": "Зеленая слизь",
+      "nameEn": null,
+      "nameOriginal": "The Green Slime",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Италия"
+        },
+        {
+          "country": "Япония"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "ratingKinopoisk": 5.2,
+      "ratingImdb": 4.8,
+      "year": 1968,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/55469.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/55469.jpg"
+    },
+    {
+      "kinopoiskId": 706272,
+      "imdbId": "tt3175580",
+      "nameRu": "Зеленая кофта",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Украина"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        }
+      ],
+      "ratingKinopoisk": 4.9,
+      "ratingImdb": 6.7,
+      "year": 2013,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/706272.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/706272.jpg"
+    },
+    {
+      "kinopoiskId": 930796,
+      "imdbId": null,
+      "nameRu": "Алиса знает, что делать! Зеленая месть",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "ratingKinopoisk": 3.8,
+      "ratingImdb": null,
+      "year": 2015,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/930796.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/930796.jpg"
+    },
+    {
+      "kinopoiskId": 89709,
+      "imdbId": "tt0403085",
+      "nameRu": "Зеленая река",
+      "nameEn": null,
+      "nameOriginal": "Green River",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "ratingKinopoisk": 2.4,
+      "ratingImdb": 3.1,
+      "year": 2008,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/89709.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/89709.jpg"
+    },
+    {
+      "kinopoiskId": 113121,
+      "imdbId": "tt0065798",
+      "nameRu": "Зеленая стена",
+      "nameEn": null,
+      "nameOriginal": "La muralla verde",
+      "countries": [
+        {
+          "country": "Перу"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": 7.1,
+      "year": 1969,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/113121.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/113121.jpg"
+    },
+    {
+      "kinopoiskId": 142784,
+      "imdbId": "tt0052953",
+      "nameRu": "Зеленая лошадь",
+      "nameEn": null,
+      "nameOriginal": "La jument verte",
+      "countries": [
+        {
+          "country": "Франция"
+        },
+        {
+          "country": "Италия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": 6.1,
+      "year": 1959,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/142784.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/142784.jpg"
+    },
+    {
+      "kinopoiskId": 195270,
+      "imdbId": null,
+      "nameRu": "Зеленая вспышка",
+      "nameEn": null,
+      "nameOriginal": "The Green Flash",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "короткометражка"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 1989,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/195270.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/195270.jpg"
+    },
+    {
+      "kinopoiskId": 197908,
+      "imdbId": "tt0345356",
+      "nameRu": "Зеленая гора",
+      "nameEn": null,
+      "nameOriginal": "Der grüne Berg",
+      "countries": [
+        {
+          "country": "Швейцария"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": 5.8,
+      "year": 1990,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/197908.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/197908.jpg"
+    },
+    {
+      "kinopoiskId": 278890,
+      "imdbId": "tt0198782",
+      "nameRu": "Зеленая гора",
+      "nameEn": null,
+      "nameOriginal": "La montagne est verte",
+      "countries": [
+        {
+          "country": "Франция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "история"
+        },
+        {
+          "genre": "короткометражка"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 1950,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/278890.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/278890.jpg"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="flex mb-4 flex-col gap-4">
     <div class="flex text-lg font-medium text-slate-400 justify-around">
       <div @click="changeCategoryAwards" :class="{'text-red underline underline-offset-8': selectFilmAwards}" class="duration-300 cursor-pointer">Awards</div>
       <div @click="changeCategorySameFilms" :class="{'text-red underline underline-offset-8': selectSameFilms}" class="duration-300 cursor-pointer">More Like This</div>
@@ -32,7 +32,11 @@
       <div class="flex flex-col row  gap-4">
         <div v-for="item in filmActors" class="flex gap-4">
           <div class="w-[90px] h-[140px]">
-            <img class="w-full rounded-xl h-full" :src="item.posterUrl" alt="actor-photo">
+            <img
+              class="w-full drop-shadow-2xl rounded-xl h-full"
+              :src="item.posterUrl"
+              alt="actor-photo"
+            >
           </div>
           <div class="flex flex-col">
             <div class="text-lg font-semibold">{{item.description}}</div>

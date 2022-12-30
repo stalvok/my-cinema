@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen  flex bg-[#F4F4F4] items-center">
+  <div class="min-h-screen flex bg-[#F4F4F4] items-center">
     <div class="container bg-white mx-auto">
       <div class="flex flex-col gap-6">
         <div class="relative row h-[400px]">
@@ -14,7 +14,7 @@
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex row justify-between">
-            <div class="text-lg font-bold">Top 10 Popular Movies This Week</div>
+            <div class="text-lg font-bold">Top 10 Popular Movies</div>
             <router-link to="/popularFilms"><div class="text-red font-semibold">See all</div></router-link>
           </div>
           <CarouselSlider :max-number="10" type-of-array="popularFilms" :items-to-show="2.5"/>
@@ -39,7 +39,15 @@ import AppIcon from "./AppIcon.vue";
 
 export default {
   name: "HomePage",
-  components: {AppIcon, CarouselSlider,MobileNavigation}
+  components: {AppIcon, CarouselSlider,MobileNavigation},
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+
+  }
 }
 
 
