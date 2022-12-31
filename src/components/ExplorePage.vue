@@ -3,16 +3,16 @@
     <div class="container h-full bg-white mx-auto">
       <div class="flex flex-col mt-6 row gap-6">
         <div class="relative text-[#9E9E9E] flex items-center w-full">
-          <AppIcon name="search" class="w-6 ml-2 h-6 absolute"/>
+          <AppIcon name="search" class="w-6 mr-4 right-0 h-6 absolute"/>
           <input
             type="text"
             v-model="inputValue"
             @keyup.enter="fetchFilms()"
             placeholder="Search"
-            class="w-full pl-10 h-12 "
+            class="w-full pl-4 h-12 "
           >
         </div>
-        <div class="grid grid-cols-2 gap-3 justify-items-center">
+        <div class="grid grid-cols-2 items-start gap-3 justify-items-center">
           <div
             v-for="(item,index) in searchedFilm.items"
             :key="index"
@@ -27,11 +27,11 @@
                 >
               </router-link>
             </div>
-            <div class="font-semibold break-normal ">{{item.nameRu}}</div>
+            <div class="font-semibold break-normal">{{item.nameRu}}</div>
           </div>
         </div>
       </div>
-      <MobileNavigation class="sticky" />
+      <MobileNavigation class="fixed"/>
     </div>
   </div>
 </template>

@@ -20,13 +20,12 @@
           :key="index"
           class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
-          <router-link :to="`/film/${item.kinopoiskId}`">
             <img
+              @click="$router.push({ path: '/film/id', query: { id: item.kinopoiskId }})"
               :src="filmsArray.items[index].posterUrl"
               alt="film card"
               class="w-full h-full"
             >
-          </router-link>
         </div>
       </div>
     </div>
@@ -50,7 +49,7 @@ export default {
   },
   methods: {
     async getNewRelease() {
-      await fetch(`./mock/newReleases.json`,{
+      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=DECEMBER`,{
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
           'Content-Type': 'application/json',
@@ -62,7 +61,7 @@ export default {
   },
   async mounted() {
     await this.getNewRelease()
-    console.log(this.filmsArray.items[0].posterUrlPreview)
+
   }
 }
 </script>

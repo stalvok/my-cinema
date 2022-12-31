@@ -25,7 +25,7 @@
           <CarouselSlider :max-number="20" type-of-array="newReleases" :items-to-show="2.5"/>
         </div>
       </div>
-       <MobileNavigation class="sticky"/>
+       <MobileNavigation class="fixed"/>
     </div>
   </div>
 </template>
