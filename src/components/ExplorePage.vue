@@ -3,7 +3,11 @@
     <div class="container h-full bg-white mx-auto">
       <div class="flex flex-col mt-6 row gap-6">
         <div class="relative text-[#9E9E9E] flex items-center w-full">
-          <AppIcon name="search" class="w-6 mr-4 right-0 h-6 absolute"/>
+          <AppIcon
+            name="search"
+            class="w-6 mr-4 right-0 h-6 absolute"
+            @click="fetchFilms()"
+          />
           <input
             type="text"
             v-model="inputValue"
