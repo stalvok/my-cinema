@@ -9,30 +9,29 @@
             v-model="inputValue"
             @keyup.enter="fetchFilms()"
             placeholder="Search"
-            class="w-full pl-4 h-12 "
+            class="w-full pl-4 h-12"
           >
         </div>
         <div class="grid grid-cols-2 items-start gap-3 justify-items-center">
           <div
+            @click="$router.push({ path: '/film/id', query: { id: item.kinopoiskId}})"
             v-for="(item,index) in searchedFilm.items"
             :key="index"
-            class="flex flex-col gap-2 items-center justify-center w-full"
+            class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
           >
             <div class="max-w-[200px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full">
-              <router-link :to="`/`">
-                <img
-                  :src="item.posterUrl"
-                  alt="film card"
-                  class="w-full h-full"
-                >
-              </router-link>
+              <img
+                :src="item.posterUrl"
+                alt="film card"
+                class="w-full h-full"
+              >
             </div>
-            <div class="font-semibold break-normal">{{item.nameRu}}</div>
+            <div class="font-semibold text-center break-normal">{{item.nameRu}}</div>
           </div>
         </div>
       </div>
-      <MobileNavigation class="fixed"/>
     </div>
+    <MobileNavigation class="fixed"/>
   </div>
 </template>
 

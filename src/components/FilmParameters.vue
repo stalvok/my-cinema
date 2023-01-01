@@ -80,7 +80,7 @@ export default {
       this.selectFilmActors = true
     },
     async getSameFilms() {
-      await fetch(`./mock/sameFilms.json`, {
+      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/similars`, {
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export default {
         .then(json => this.sameFilms = json)
     },
     async getFilmAwards() {
-      await fetch(`./mock/filmAwards.json`, {
+      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/awards`, {
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
           'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ export default {
         .then(json => this.filmAwards = json)
     },
     async getFilmActors() {
-      await fetch(`./mock/filmActors.json`, {
+      await fetch(`https://kinopoiskapiunofficial.tech/api/v1/staff?filmId=${this.$props.filmId}`, {
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
           'Content-Type': 'application/json',

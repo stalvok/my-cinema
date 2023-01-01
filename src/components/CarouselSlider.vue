@@ -5,8 +5,8 @@
           <img
             @click="$router.push({ path: '/film/id', query: { id: Object.values(item)[0]}})"
             :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
-             alt="film card"
-            class="w-full h-full"
+            alt="film card"
+            class="w-full cursor-pointer h-full"
           >
       </div>
     </slide>

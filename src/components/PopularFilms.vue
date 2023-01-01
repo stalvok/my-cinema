@@ -17,7 +17,7 @@
         <div
             v-for="(item,index) in filmsArray.films"
             :key="index"
-            class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
+            class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
             <img
               @click="$router.push({ path: '/film/id', query: { id: item.filmId}})"
