@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <MobileNavigation class="fixed"/>
+    <MobileNavigation class="sticky "/>
   </div>
 </template>
 
