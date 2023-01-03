@@ -129,16 +129,6 @@
   </div>
 </template>
 
-<style>
-.app-icon svg {
-  width: 100%;
-  height: 100%;
-  & path {
-    stroke:currentColor;
-  }
-}
-</style>
-
 <script>
 
 export default {
@@ -171,5 +161,10 @@ export default {
 </script>
 
 <style scoped>
-
+  .app-icon svg {
+    @apply w-full h-full;
+    & path {
+      @apply stroke-current;
+    }
+  }
 </style>

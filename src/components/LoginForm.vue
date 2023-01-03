@@ -73,8 +73,4 @@ export default {
 
 <style scoped>
 
-  div {
-
-  }
-
 </style>

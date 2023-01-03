@@ -5,9 +5,9 @@
       <div class="w-full flex items-center justify-between">
         <div class="flex gap-4 items-center">
           <AppIcon
-              @click="$router.go(-1)"
-              name="vector"
-              class="w-6 h-6 cursor-pointer"
+            @click="$router.go(-1)"
+            name="vector"
+            class="w-6 h-6 cursor-pointer"
           />
           <div class="text-lg font-bold">Popular Films</div>
         </div>
@@ -15,9 +15,9 @@
       </div>
       <div class="grid grid-cols-2 gap-3 justify-items-center">
         <div
-            v-for="(item,index) in filmsArray.films"
-            :key="index"
-            class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
+          v-for="(item,index) in filmsArray.films"
+          :key="index"
+          class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
             <img
               @click="$router.push({ path: '/film/id', query: { id: item.filmId}})"

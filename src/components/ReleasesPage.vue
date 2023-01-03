@@ -20,12 +20,12 @@
           :key="index"
           class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
-            <img
-              @click="$router.push({ path: '/film/id', query: { id: item.kinopoiskId }})"
-              :src="filmsArray.items[index].posterUrl"
-              alt="film card"
-              class="w-full h-full"
-            >
+          <img
+            @click="$router.push({ path: '/film/id', query: { id: item.kinopoiskId }})"
+            :src="filmsArray.items[index].posterUrl"
+            alt="film card"
+            class="w-full h-full"
+          >
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@ export default {
           'Content-Type': 'application/json',
         },
       })
-          .then(res => res.json())
-          .then(json => this.filmsArray = json)
+        .then(res => res.json())
+        .then(json => this.filmsArray = json)
     }
   },
   async mounted() {
@@ -68,7 +68,5 @@ export default {
 
 <style scoped>
 
-div {
-}
 
 </style>

@@ -7,15 +7,15 @@
     </div>
     <div v-show="selectSameFilms" class="w-full grid grid-cols-2 gap-3 justify-items-center">
       <div
-          v-for="(item,index) in sameFilms.items"
-          :key="index"
-          class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
+        v-for="(item,index) in sameFilms.items"
+        :key="index"
+        class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
       >
         <router-link :to="`/film/${item.filmId}`">
           <img
-              :src="sameFilms.items[index].posterUrlPreview"
-              alt="film card"
-              class="w-full h-full"
+            :src="sameFilms.items[index].posterUrlPreview"
+            alt="film card"
+            class="w-full h-full"
           >
         </router-link>
       </div>
@@ -108,7 +108,6 @@ export default {
       })
         .then(res => res.json())
         .then(json => this.filmActors = json.slice(0,20))
-
     },
   },
   props: {
