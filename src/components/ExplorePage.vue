@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen h-1 flex flex-col bg-[#F4F4F4]">
+  <div class="min-h-screen  flex flex-col">
     <div class="container h-full bg-white mx-auto">
       <div class="flex flex-col mt-6 row gap-6">
         <div class="relative text-[#9E9E9E] flex items-center w-full">
           <AppIcon
             name="search"
-            class="w-6 mr-4 right-0 h-6 absolute"
+            class="w-6 mr-4 right-0 cursor-pointer h-6 absolute"
             @click="fetchFilms()"
           />
           <input
@@ -35,8 +35,8 @@
         </div>
       </div>
     </div>
-    <MobileNavigation class="sticky "/>
   </div>
+  <MobileNavigation class="sticky "/>
 </template>
 
 

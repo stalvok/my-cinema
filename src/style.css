@@ -7,6 +7,9 @@
 }
 
 @layer components {
+  * {
+    box-sizing: border-box;
+  }
   .row {
     @apply px-4 ;
   }
