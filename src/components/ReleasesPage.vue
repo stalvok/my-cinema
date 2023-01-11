@@ -1,6 +1,7 @@
 <template>
-  <div class="min-h-screen flex  flex-col bg-[#F4F4F4]">
-    <div class="container py-12 bg-white row flex-col gap-10 flex mx-auto">
+  <div class="min-h-screen flex bg-white flex-col bg-[#F4F4F4]">
+    <PageLoader v-show="!loaderTimer"/>
+    <div class="container py-12 tablet:pb-[74px] row flex-col gap-10 flex mx-auto">
       <div class="w-full flex items-center justify-between">
         <div class="flex gap-4 items-center">
           <AppIcon
@@ -21,7 +22,7 @@
           class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
         >
           <img
-            @click="$router.push({ path: '/film/id', query: { id: item.kinopoiskId }})"
+            @click="$router.push({ path: '/film/', query: { id: item.kinopoiskId }})"
             :src="filmsArray.items[index].posterUrl"
             alt="film card"
             class="w-full h-full"
@@ -29,7 +30,6 @@
         </div>
       </div>
     </div>
-    <MobileNavigation class="sticky"/>
   </div>
 
 </template>
@@ -37,14 +37,15 @@
 <script>
 
 import AppIcon from "./AppIcon.vue";
-import MobileNavigation from "./MobileNavigation.vue";
+import PageLoader from "./PageLoader.vue";
 
 export default {
-  components: {AppIcon,MobileNavigation},
+  components: {AppIcon,PageLoader},
   name: "ReleasesPage",
   data() {
     return {
       filmsArray: [],
+      loaderTimer: false
     }
   },
   methods: {
@@ -61,6 +62,9 @@ export default {
   },
   async mounted() {
     await this.getNewRelease()
+    setTimeout( () => {
+      this.loaderTimer = true
+    } ,600)
 
   }
 }

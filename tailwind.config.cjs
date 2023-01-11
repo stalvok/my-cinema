@@ -18,6 +18,12 @@ module.exports = {
       textColor: {
         red: '#E21221',
       },
+      fill: {
+        red: '#E21221'
+      },
+      stroke: {
+        red: '#E21221'
+      },
       fontFamily: {
         sans: [
           'Urbanist',

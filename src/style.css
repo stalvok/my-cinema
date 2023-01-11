@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+.scrollbar-width-none {
+  scrollbar-width: none
+}
 * {
   box-sizing: border-box;
 }
-
 @layer components {
-  * {
-    box-sizing: border-box;
-  }
   .row {
     @apply px-4 ;
   }
@@ -23,8 +27,14 @@
       @apply px-2 py-1 text-sm;
     }
   }
-  input {
-    @apply px-2 py-[18px] bg-slate-100 rounded-xl outline-0;
+  select {
+    @apply px-2 py-3 bg-slate-100 rounded-xl outline-0 ;
+  }
+   input {
+     @apply px-2 py-3 bg-slate-100 rounded-xl outline-0;
+     &.input-large {
+       @apply px-2 py-[18px] bg-slate-100 rounded-xl outline-0;
+     }
   }
   .container-ch {
     @apply relative pl-8 cursor-pointer;
@@ -57,9 +67,9 @@
     }
   }
   .active-link {
-    @apply text-4xl text-red ;
+    @apply text-4xl text-red fill-red ;
     & svg {
-      @apply stroke-red-400;
+      @apply stroke-red ;
     }
   }
   .loader {
@@ -74,7 +84,9 @@
     box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
     scrollbar-width: none
   }
-  .phone::-webkit-scrollbar { width: 0; }
+  .phone::-webkit-scrollbar {
+    @apply w-0;
+  }
   @keyframes loader {
     100% {
       transform: translate(-50%, -50%) rotate(360deg);

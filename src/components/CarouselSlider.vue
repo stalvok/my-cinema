@@ -1,12 +1,12 @@
 <template>
   <carousel :items-to-show="itemsToShow">
-    <slide v-for="(item,index) in filmsSlice" :key="item">
-      <div class="overflow-hidden drop-shadow-lg rounded-3xl relative h-[200px] w-[140px]">
+    <slide v-for="(item) in filmsSlice" :key="item">
+      <div class="overflow-hidden rounded-3xl relative h-[200px] w-[140px]">
           <img
-            @click="$router.push({ path: '/film/id', query: { id: Object.values(item)[0]}})"
-            :src="filmsArray[Object.keys(filmsArray)[1]][index].posterUrlPreview"
+            @click="$router.push({ path: '/film/' + item.filmId})"
+            :src="item.posterUrlPreview"
             alt="film card"
-            class="w-full cursor-pointer h-full"
+            class="w-full object-cover cursor-pointer h-full"
           >
       </div>
     </slide>
@@ -24,7 +24,6 @@ export default {
   data() {
     return {
       filmsArray: [],
-      filmsSlice: [],
     }
   },
   props: {
@@ -36,7 +35,7 @@ export default {
     }
   },
   methods: {
-    async getNewRelease() {
+    async getPopularFilms() {
         await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1`,{
           headers: {
             'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
@@ -44,9 +43,9 @@ export default {
           },
         })
           .then(res => res.json())
-          .then(json => this.filmsArray = json)
+          .then(json => this.filmsArray = json.films)
     },
-    async getPopularFilms() {
+    async getNewRelease() {
       await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=DECEMBER`,{
         headers: {
           'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
@@ -54,25 +53,26 @@ export default {
         },
       })
           .then(res => res.json())
-          .then(json => this.filmsArray = json)
+          .then(json => this.filmsArray = json.items.map(film => {
+            return {
+              filmId: film.kinopoiskId,
+              ...film
+            }
+          }))
     },
-    filmSlice() {
-     this.filmsSlice = this.filmsArray[Object.keys(this.filmsArray)[1]].slice(0,this.maxNumber)
-    }
   },
-  computed:{
-
+  computed: {
+    filmsSlice() {
+      return this.filmsArray.slice(0,this.maxNumber)
+    }
   },
  async mounted() {
-    console.log(this.typeOfArray)
     if (this.typeOfArray === 'popularFilms') {
-      await this.getNewRelease()
+      await this.getPopularFilms()
     }
    if (this.typeOfArray === 'newReleases') {
-     await this.getPopularFilms()
+     await this.getNewRelease()
    }
-
-   this.filmSlice()
   },
 }
 </script>

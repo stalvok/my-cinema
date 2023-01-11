@@ -6,23 +6,30 @@
       <div @click="changeCategoryselect" :class="{'text-red underline underline-offset-8': selectFilmActors}" class="duration-300 cursor-pointer">Cast</div>
     </div>
     <div v-show="selectSameFilms" class="w-full grid grid-cols-2 gap-3 justify-items-center">
-      <div
-        v-for="(item,index) in sameFilms.items"
-        :key="index"
-        class="bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
-      >
-        <router-link :to="`/film/${item.filmId}`">
-          <img
-            :src="sameFilms.items[index].posterUrlPreview"
-            alt="film card"
-            class="w-full h-full"
-          >
-        </router-link>
+      <div v-if="sameFilms.length === 0" class="text-xl inline col-span-full" >
+        No similar films have been found
       </div>
+
+      <router-link
+        v-for="(item) in sameFilms"
+        :to="'/film/' + item.filmId"
+        @clicK="this.$router.reload()"
+        :key="item"
+        class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
+      >
+        <img
+          :src="item.posterUrlPreview"
+          alt="film card"
+          class="w-full h-full"
+        >
+      </router-link>
     </div>
     <div v-show="selectFilmAwards" class="flex flex-col">
+      <div v-show="filmAwards.length === 0" class="self-center text-xl">
+        The film has no awards
+      </div>
       <div class="flex flex-col gap-4">
-        <div v-for="(item) in filmAwards.items" class="flex flex-col" key="item">
+        <div v-for="(item) in filmAwards" class="flex flex-col" key="item">
           <div class="text-lg font-semibold">{{item.name}}</div>
           <div>{{item.nominationName}} в {{item.year}} году</div>
         </div>
@@ -50,6 +57,8 @@
 </template>
 
 <script>
+
+
 export default {
   components: {},
   name: "FilmParameters",
@@ -87,7 +96,7 @@ export default {
         },
       })
         .then(res => res.json())
-        .then(json => this.sameFilms = json)
+        .then(json => this.sameFilms = json.items)
     },
     async getFilmAwards() {
       await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/awards`, {
@@ -97,7 +106,7 @@ export default {
         },
       })
         .then(res => res.json())
-        .then(json => this.filmAwards = json)
+        .then(json => this.filmAwards = json.items)
     },
     async getFilmActors() {
       await fetch(`https://kinopoiskapiunofficial.tech/api/v1/staff?filmId=${this.$props.filmId}`, {
