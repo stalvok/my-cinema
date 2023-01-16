@@ -9,7 +9,7 @@
             </div>
             <AppIcon name="search" class="h-full w-8"/>
           </div>
-          <div class="flex flex-col gap-4 items-center">
+          <div class="flex flex-col gap-2 items-center">
             <div class="h-[120px] w-[120px]">
               <img
                 src="../assets/img/profile-avatar.jpg"
@@ -17,8 +17,9 @@
                 alt="user avatar"
               >
             </div>
-            <div class="text-xl font-semibold">Andrey Ainsley</div>
-            <div>andrew_ainsley@youdomain.com</div>
+            <div class="text-xl font-semibold">{{name}}</div>
+            <div>{{sex}}</div>
+            <div>{{email}}</div>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex items-center justify-between font-semibold">
@@ -72,11 +73,26 @@
 import AppIcon from "./AppIcon.vue";
 
 
+
 export default {
   components:{AppIcon},
-  name: "ProfilePage"
+  name: "ProfilePage",
+  data() {
+    return {
+      name: '',
+      email: '',
+      sex: '',
+    }
+  },
+  mounted() {
+    this.name = JSON.parse(localStorage.getItem('user-description')).name || 'enter your name'
+    this.email = JSON.parse(localStorage.getItem('user-description')).email || 'enter your email'
+    this.sex = JSON.parse(localStorage.getItem('user-description')).sex
+  }
 }
 </script>
-
 <style scoped>
+div {
+  border: 1px solid red;
+}
 </style>

@@ -14,7 +14,7 @@
          </div>
          <div v-if="addedFilms" class="grid row h-full grid-cols-2 items-start gap-3 justify-items-center">
            <div
-               @click="Pogination()"
+             @click="$router.push({ path: '/film/' + item.kinopoiskId })"
              v-for="(item,index) in addedFilms.films"
              :key="index"
              class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
@@ -28,7 +28,7 @@
                <AppIcon
                  name="plus"
                  class="h-6 w-6 absolute top-3 bg-red fill-white rounded-xl rotate-45 right-3"
-                 @click.stop="getAddedFilms()"
+                 @click.stop="deleteFilm(index)"
                />
              </div>
              <div class="font-semibold text-center break-normal">{{item.nameRu}}</div>
@@ -39,7 +39,7 @@
    </div>
 </template>
 <script>
-// @click="$router.push({ path: '/film/' + item.kinopoiskId })"
+
 import AppIcon from "./AppIcon.vue";
 import {useStorage} from "@vueuse/core";
 
@@ -49,18 +49,22 @@ export default {
   data() {
     return {
       addedFilms:JSON.parse(localStorage.getItem('user-films')),
+      newArray: ''
     }
   },
   methods: {
-     getAddedFilms() {
-       console.log('icon')
+     deleteFilm(index) {
+      this.addedFilms.films.splice(index,1)
+       console.log(this.addedFilms.films)
     },
-    Pogination() {
-       console.log('div')
-    }
   },
    mounted() {
 
+  },
+  beforeRouteLeave() {
+    localStorage.clear()
+    useStorage('user-films', this.addedFilms)
+    console.log('routerLeave')
   }
 }
 </script>

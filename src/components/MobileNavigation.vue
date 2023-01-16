@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[72px] shadow-inner rounded-2xl  flex items-center bg-white justify-around row w-full">
+  <div class="h-[72px] shadow-inner rounded-2xl flex items-center bg-white justify-around row w-full">
     <router-link
       to="/home"
       class="flex flex-col items-center gap-1"
