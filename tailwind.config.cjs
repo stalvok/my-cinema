@@ -10,13 +10,17 @@ module.exports = {
     extend: {
       backgroundColor: {
         red: '#E21221',
-        grey:'#FAFAFA'
+        grey: '#FAFAFA',
+        modal: 'rgba(0, 0, 0, 0.7)'
       },
       borderColor: {
         red: '#E21221',
       },
       textColor: {
         red: '#E21221',
+      },
+      height: {
+        modal: 'calc(100% + 40px)'
       },
       fill: {
         red: '#E21221'

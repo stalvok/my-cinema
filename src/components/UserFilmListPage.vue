@@ -7,7 +7,21 @@
              <img class="h-6 w-6" src="../assets/img/litterM-home.png">
              <span class="text-2xl font-bold">My List</span>
            </div>
-           <AppIcon name="search" class="h-full w-8"/>
+           <div class="flex gap-4">
+             <transition>
+               <input
+                 v-model="inputSearchValue"
+                 v-show="searchInputShow"
+                 class="max-w-[140px] h-8"
+                 type="text"
+               >
+             </transition>
+             <AppIcon
+               @click="searchInputShow = !searchInputShow"
+               name="search"
+               class="cursor-pointer w-8"
+             />
+           </div>
          </div>
          <div v-if="!addedFilms" class="m-auto relative bottom-10">
            <img src="../assets/img/tablets.jpg" class="w-full h-full object-cover" />
@@ -15,7 +29,7 @@
          <div v-if="addedFilms" class="grid row h-full grid-cols-2 items-start gap-3 justify-items-center">
            <div
              @click="$router.push({ path: '/film/' + item.kinopoiskId })"
-             v-for="(item,index) in addedFilms.films"
+             v-for="(item,index) in addedFilmsSortByName"
              :key="index"
              class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
            >
@@ -23,7 +37,7 @@
                <img
                  :src="item.posterUrl"
                  alt="film card"
-                 class="w-full h-full"
+                 class="w-full object-cover h-full"
                >
                <AppIcon
                  name="plus"
@@ -38,6 +52,8 @@
      </div>
    </div>
 </template>
+
+
 <script>
 
 import AppIcon from "./AppIcon.vue";
@@ -49,20 +65,28 @@ export default {
   data() {
     return {
       addedFilms:JSON.parse(localStorage.getItem('user-films')),
-      newArray: ''
+      searchInputShow: false,
+      inputSearchValue:''
     }
   },
   methods: {
      deleteFilm(index) {
-      this.addedFilms.films.splice(index,1)
+       this.addedFilms.films.splice(index, 1)
        console.log(this.addedFilms.films)
-    },
+     },
   },
    mounted() {
-
+    
+  },
+  computed: {
+    addedFilmsSortByName() {
+      return this.addedFilms.films.filter(item => {
+        return item.nameRu.toUpperCase().indexOf(this.inputSearchValue.toUpperCase()) !== -1
+      })
+    },
   },
   beforeRouteLeave() {
-    localStorage.clear()
+    localStorage.removeItem('user-films')
     useStorage('user-films', this.addedFilms)
     console.log('routerLeave')
   }
@@ -70,5 +94,15 @@ export default {
 </script>
 
 <style scoped>
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
 </style>

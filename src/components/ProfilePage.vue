@@ -12,7 +12,7 @@
           <div class="flex flex-col gap-2 items-center">
             <div class="h-[120px] w-[120px]">
               <img
-                src="../assets/img/profile-avatar.jpg"
+                :src="profileImg || 'https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png'"
                 class="w-full h-full object-cover rounded-full"
                 alt="user avatar"
               >
@@ -34,34 +34,6 @@
                 <AppIcon name="vector" class="w-6 h-6 rotate-180"/>
               </router-link>
             </div>
-            <div class="flex items-center justify-between font-semibold">
-              <div class="flex items-center gap-2">
-                <AppIcon name="profile" class="w-6 h-6"/>
-                <div>Notification</div>
-              </div>
-              <AppIcon name="vector" class="w-6 h-6 rotate-180"/>
-            </div>
-            <div class="flex items-center justify-between font-semibold">
-              <div class="flex items-center gap-2">
-                <AppIcon name="profile" class="w-6 h-6"/>
-                <div>Download</div>
-              </div>
-              <AppIcon name="vector" class="w-6 h-6 rotate-180"/>
-            </div>
-            <div class="flex items-center justify-between font-semibold">
-              <div class="flex items-center gap-2">
-                <AppIcon name="profile" class="w-6 h-6"/>
-                <div>Security</div>
-              </div>
-              <AppIcon name="vector" class="w-6 h-6 rotate-180"/>
-            </div>
-            <div class="flex items-center justify-between font-semibold">
-              <div class="flex items-center gap-2">
-                <AppIcon name="profile" class="w-6 h-6"/>
-                <div>Language</div>
-              </div>
-              <AppIcon name="vector" class="w-6 h-6 rotate-180"/>
-            </div>
           </div>
         </div>
       </div>
@@ -79,20 +51,42 @@ export default {
   name: "ProfilePage",
   data() {
     return {
+      storage: JSON.parse(localStorage.getItem('user-description')),
       name: '',
       email: '',
       sex: '',
+      profileImg: ''
     }
   },
   mounted() {
-    this.name = JSON.parse(localStorage.getItem('user-description')).name || 'enter your name'
-    this.email = JSON.parse(localStorage.getItem('user-description')).email || 'enter your email'
-    this.sex = JSON.parse(localStorage.getItem('user-description')).sex
+   console.log(this.storage)
+    if (!this.storage) {
+      console.log(1)
+      this.email = 'enter your email'
+      this.name = 'enter your name'
+      this.sex = 'MALE'
+      this.profileImg = 'https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png'
+    } else {
+      console.log(this.storage.email)
+      this.email = this.storage.email  || 'enter your email'
+      this.name = this.storage.name || 'enter your name'
+      this.sex = this.storage.sex || 'MALE'
+      this.profileImg = this.storage.image || 'https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png'
+    }
+
+  },
+  methods: {
+    addDescription(name) {
+
+    }
   }
 }
 </script>
+
 <style scoped>
-div {
-  border: 1px solid red;
-}
+
+  div {
+    border: 1px solid red;
+  }
+
 </style>

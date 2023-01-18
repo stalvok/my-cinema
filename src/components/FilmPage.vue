@@ -27,14 +27,14 @@
           <div class="text-3xl font-bold">{{ currentFilm.nameOriginal }}</div>
           <div class="italic">"{{ currentFilm.slogan ? currentFilm.slogan : 'The film has no slogan'}}"</div>
           <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
-            <div v-if="currentFilm.ratingMpaa !== ''" class="button cursor-default uppercase outline is-link-active is-exact-active is-small">
-              {{ currentFilm.ratingMpaa }}
+            <div v-if="currentFilm.ratingMpaa" class="button cursor-default uppercase outline is-link-active is-exact-active is-small">
+              {{ currentFilm.ratingMpaa  }}
             </div>
             <div class="button cursor-default outline is-small">
               {{ currentFilm.year }}
             </div>
             <div
-              v-if="currentFilm.ratingKinopoisk !== ''"
+              v-if="currentFilm.ratingKinopoisk"
               class="button cursor-default outline is-small"
             >
               <AppIcon
@@ -43,7 +43,7 @@
               />
               {{ currentFilm.ratingKinopoisk }}
             </div>
-            <div class="button cursor-default outline is-small">
+            <div v-if="currentFilm.filmLength" class="button cursor-default outline is-small">
               {{ currentFilm.filmLength }} min
             </div>
           </div>
@@ -123,7 +123,7 @@ export default {
   },
   async mounted() {
     await this.fetchFilm()
-    console.log(this.state)
+    console.log(this.currentFilm.ratingMpaa)
 
   },
   watch: {

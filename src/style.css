@@ -67,9 +67,9 @@
     }
   }
   .active-link {
-    @apply text-4xl text-red fill-red ;
+    @apply text-4xl text-red fill-red;
     & svg {
-      @apply stroke-red ;
+      @apply stroke-red;
     }
   }
   .loader {

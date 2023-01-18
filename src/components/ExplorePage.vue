@@ -26,7 +26,7 @@
           >
             <div class="max-w-[200px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full">
               <img
-                :src="item.posterUrl  "
+                :src="item.posterUrl"
                 alt="film card"
                 class="w-full h-full"
               >
@@ -38,8 +38,6 @@
     </div>
   </div>
 </template>
-
-
 
 <script>
 
@@ -83,7 +81,7 @@ export default {
     setTimeout( () => {
       this.loaderTimer = true
     } ,600)
-  }
+  },
 }
 </script>
 

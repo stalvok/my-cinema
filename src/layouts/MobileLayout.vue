@@ -2,10 +2,8 @@
   <div class="overflow-y-scroll w-full h-full">
     <slot/>
   </div>
-  <MobileNavigation class="absolute bottom-0"/>
+  <MobileNavigation class="sticky bottom-0"/>
 </template>
-
-
 
 <script>
 import MobileNavigation from "../components/MobileNavigation.vue";
