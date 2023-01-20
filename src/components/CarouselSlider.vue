@@ -1,7 +1,7 @@
 <template>
   <carousel :items-to-show="itemsToShow">
     <slide v-for="(item) in filmsSlice" :key="item">
-      <div class="overflow-hidden rounded-3xl relative h-[200px] w-[140px]">
+      <div class="overflow-hidden rounded-3xl relative h-[200px] w-[140px] lg:w-[200px] lg:h-[280px]">
           <img
             @click="$router.push({ path: '/film/' + item.filmId})"
             :src="item.posterUrlPreview"
@@ -15,10 +15,11 @@
 
 <script>
 
+import { defineComponent } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-export default {
+export default  {
   name: "CarouselSlider",
   components: { Carousel, Pagination, Slide, Navigation},
   data() {
@@ -75,12 +76,5 @@ export default {
    }
   },
 }
+
 </script>
-
-<style scoped>
-
-
-
-
-
-</style>

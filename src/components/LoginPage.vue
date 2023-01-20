@@ -1,5 +1,5 @@
 <template>
- <div class="h-full relative flex items-center">
+ <div class="h-screen relative flex items-center">
    <router-link class="left-0 top-0 mt-4 ml-4 absolute sm:hidden" to="/">
      <AppIcon name="vector" class="w-8 h-8"/>
    </router-link>
@@ -47,7 +47,8 @@ export default {
 <style scoped>
 
 div {
-
+  border: 1px solid red;
 }
+
 
 </style>

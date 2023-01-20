@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
 ::-webkit-scrollbar {
   width: 0;
@@ -67,7 +76,7 @@
     }
   }
   .active-link {
-    @apply text-4xl text-red fill-red;
+    @apply text-red fill-red;
     & svg {
       @apply stroke-red;
     }
@@ -81,7 +90,7 @@
   }
   .phone {
     border-radius: 40px;
-    box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
+    box-shadow: 0 0 0 11px #1f1f1f, 0 0 0 13px #191919, 0 0 0 20px #111;
     scrollbar-width: none
   }
   .phone::-webkit-scrollbar {

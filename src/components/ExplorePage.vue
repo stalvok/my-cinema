@@ -1,31 +1,43 @@
 <template>
-  <div class="min-h-[736px] flex flex-col">
+  <div class="min-h-screen flex flex-col">
     <div class="container tablet:pb-[74px] h-full bg-white mx-auto">
+      <header class="hidden bg-[#5D6065] tablet:flex relative justify-between items-center row w-full h-20">
+        <img
+          class="h-10 w-10"
+          src="../assets/img/litterM-home.png"
+        >
+        <div class="hidden tablet:flex text-base lg:text-xl text-center gap-3">
+          <router-link class="w-20  hover:font-semibold" to="/home">Home</router-link>
+          <router-link class="w-20 hover:font-semibold" to="/explore">Explore</router-link>
+          <router-link class="w-20 hover:font-semibold" to="/user-list">My list</router-link>
+          <router-link class="w-20 hover:font-semibold" to="/profile">Profile</router-link>
+        </div>
+      </header>
       <PageLoader v-show="!loaderTimer"/>
-      <div class="flex flex-col mt-6  row gap-6">
-        <div class="relative text-[#9E9E9E] flex items-center w-full">
-          <AppIcon
-            name="search"
-            class="w-6 mr-4 right-0 cursor-pointer h-6 absolute"
-            @click="fetchFilms()"
-          />
+      <div class="flex flex-col mt-6 row gap-6">
+        <div class="relative text-[#9E9E9E] justify-end flex gap-6 items-center w-full">
           <input
             type="text"
             v-model="inputValue"
             @keyup.enter="fetchFilms()"
             placeholder="Search"
-            class="w-full pl-4 h-12"
+            class="pl-4 w-full tablet:w-[268px] h-12"
           >
+          <AppIcon
+            name="search"
+            class="w-8 h-8 cursor-pointer"
+            @click="fetchFilms()"
+          />
         </div>
-        <div class="grid grid-cols-2 items-start  gap-3 justify-items-center">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start gap-3 justify-items-center">
           <div
-            @click="$router.push({ path: '/film/' + item.filmId || item.kinopoiskId})"
             v-for="(item,index) in searchedFilm.items || searchedFilm.films"
             :key="index"
             class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
           >
-            <div class="max-w-[200px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full">
+            <div class="w-[200px] h-[240px] lg:w-[240px] lg:h-[280px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative">
               <img
+                @click="$router.push({ path: '/film/' + item.filmId || item.kinopoiskId})"
                 :src="item.posterUrl"
                 alt="film card"
                 class="w-full h-full"

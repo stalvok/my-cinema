@@ -4,14 +4,14 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      'tablet': '480px'
-    },
     extend: {
       backgroundColor: {
         red: '#E21221',
         grey: '#FAFAFA',
         modal: 'rgba(0, 0, 0, 0.7)'
+      },
+      screens: {
+        'tablet': '480px'
       },
       borderColor: {
         red: '#E21221',
@@ -58,7 +58,6 @@ module.exports = {
           'monospace'
         ]
       },
-
       animation: {
         loader: 'loader 1.1s linear infinite'
       },
