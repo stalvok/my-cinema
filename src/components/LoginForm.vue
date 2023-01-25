@@ -5,7 +5,7 @@
       <input
         type="text"
         v-model="email"
-        class="w-full  pl-12"
+        class="w-full md:input-large pl-12"
         :class="{'border-2 border-red': wrongPassword}"
       >
     </div>
@@ -14,7 +14,7 @@
       <input
         type="password"
         v-model="password"
-        class="w-full pl-12"
+        class="w-full md:input-large pl-12"
         :class="{'border-2 border-red': wrongPassword}"
       >
     </div>

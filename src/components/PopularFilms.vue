@@ -2,21 +2,9 @@
   <div class="h-full flex flex-col bg-[#F4F4F4]">
     <PageLoader v-show="!loaderTimer"/>
     <div class="container tablet:pb-[74px] bg-white flex-col gap-6 flex mx-auto">
-      <header class="hidden bg-[#5D6065] tablet:flex relative justify-between items-center row w-full h-20">
-        <div class="flex gap-4 items-center">
-          <img
-            class="h-10 w-10"
-            src="../assets/img/litterM-home.png"
-          >
-          <div class="text-xl lg:font-bold text-white lg:text-3xl">Popular Films</div>
-        </div>
-        <div class="hidden tablet:flex text-base lg:text-xl text-center gap-3">
-          <router-link class="w-14 lg:w-16 hover:font-semibold" to="/home">Home</router-link>
-          <router-link class="w-14 lg:w-16 hover:font-semibold" to="/explore">Explore</router-link>
-          <router-link class="w-14 lg:w-16 hover:font-semibold" to="/user-list">My list</router-link>
-          <router-link class="w-14 lg:w-16 hover:font-semibold" to="/profile">Profile</router-link>
-        </div>
-      </header>
+     <AppHeader>
+       Popular Films
+     </AppHeader>
       <div class="w-full mt-6 row flex items-center justify-between">
         <div class="flex tablet:hidden gap-4 items-center">
           <AppIcon
@@ -33,7 +21,7 @@
           :key="index"
           class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
         >
-          <div class="w-[160px] h-[200px] sm:w-[200px] sm:h-[240px] lg:w-[240px] lg:h-[280px] overflow-hidden drop-shadow-lg rounded-3xl">
+          <div class="film-card">
             <img
               @click="$router.push({ path: '/film/' + item.filmId})"
               :src="item.posterUrlPreview"
@@ -51,11 +39,13 @@
 
 <script>
 
+
+import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 
 export default {
-  components: {AppIcon,PageLoader},
+  components: {AppHeader, AppIcon,PageLoader},
   name: "ReleasesPage",
   data() {
     return {

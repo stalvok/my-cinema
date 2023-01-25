@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-center bg-no-repeat bg-cover bg-[url('./assets/img/welcomePicture2.png')] ">
+  <div class="h-screen left-0 absolute w-full bg-center bg-no-repeat bg-cover bg-[url('./assets/img/welcomePicture2.png')] ">
     <div class="w-full absolute bg-black opacity-70 h-full"></div>
     <div class="container h-full mx-auto flex justify-center items-center row">
       <div class="flex mb-10 z-20 relative text-white text-center max-w-[420px] flex-col gap-10">
@@ -29,3 +29,4 @@ export default {
 }
 
 </script>
+

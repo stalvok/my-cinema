@@ -1,18 +1,9 @@
 <template>
     <div class="container bg-white mx-auto">
       <div class="flex flex-col gap-6">
-        <header class="hidden bg-[#5D6065]  tablet:flex relative justify-between -mb-6 items-center row w-full h-20">
-          <img
-            class="h-10 w-10"
-            src="../assets/img/litterM-home.png"
-          >
-          <div class="hidden tablet:flex text-base lg:text-xl text-center gap-3">
-            <router-link class="w-20  hover:font-semibold" to="/home">Home</router-link>
-            <router-link class="w-20 hover:font-semibold" to="/explore">Explore</router-link>
-            <router-link class="w-20 hover:font-semibold" to="/user-list">My list</router-link>
-            <router-link class="w-20 hover:font-semibold" to="/profile">Profile</router-link>
-          </div>
-        </header>
+          <AppHeader class="-mb-6">
+            Home
+          </AppHeader>
         <div class="relative row h-[440px] lg:h-[480px]">
           <img
             class="absolute left-0 object-cover h-full w-full "
@@ -43,6 +34,7 @@
 
 <script>
 
+import AppHeader from "./AppHeader.vue";
 import 'vue3-carousel/dist/carousel.css'
 import CarouselSlider from "./CarouselSlider.vue";
 import AppIcon from "./AppIcon.vue";
@@ -50,7 +42,7 @@ import PageLoader from "./PageLoader.vue";
 
 export default {
   name: 'HomePage',
-  components: {AppIcon, CarouselSlider,PageLoader},
+  components: {AppIcon, CarouselSlider,PageLoader,AppHeader},
   data() {
     return {
       loaderTimer: false,

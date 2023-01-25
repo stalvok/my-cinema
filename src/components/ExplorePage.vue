@@ -1,18 +1,19 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <div class="container tablet:pb-[74px] h-full bg-white mx-auto">
-      <header class="hidden bg-[#5D6065] tablet:flex relative justify-between items-center row w-full h-20">
-        <img
-          class="h-10 w-10"
-          src="../assets/img/litterM-home.png"
-        >
-        <div class="hidden tablet:flex text-base lg:text-xl text-center gap-3">
-          <router-link class="w-20  hover:font-semibold" to="/home">Home</router-link>
-          <router-link class="w-20 hover:font-semibold" to="/explore">Explore</router-link>
-          <router-link class="w-20 hover:font-semibold" to="/user-list">My list</router-link>
-          <router-link class="w-20 hover:font-semibold" to="/profile">Profile</router-link>
+      <AppHeader>
+        Explore
+      </AppHeader>
+      <div class="w-full mt-6 row flex items-center justify-between">
+        <div class="flex tablet:hidden gap-4 items-center">
+          <AppIcon
+            @click="$router.go(-1)"
+            name="vector"
+            class="w-6 h-6 cursor-pointer"
+          />
+          <div class="text-2xl font-bold">Popular Films</div>
         </div>
-      </header>
+      </div>
       <PageLoader v-show="!loaderTimer"/>
       <div class="flex flex-col mt-6 row gap-6">
         <div class="relative text-[#9E9E9E] justify-end flex gap-6 items-center w-full">
@@ -35,9 +36,9 @@
             :key="index"
             class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
           >
-            <div class="w-[200px] h-[240px] lg:w-[240px] lg:h-[280px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative">
+            <div class="film-card">
               <img
-                @click="$router.push({ path: '/film/' + item.filmId || item.kinopoiskId})"
+                @click="$router.push({ path: '/film/' + (item.filmId || item.kinopoiskId)})"
                 :src="item.posterUrl"
                 alt="film card"
                 class="w-full h-full"
@@ -53,12 +54,13 @@
 
 <script>
 
+import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 
 export default {
   name: "explorePage",
-  components: {AppIcon,PageLoader},
+  components: {AppIcon,PageLoader,AppHeader},
   data() {
     return {
       searchedFilm: '',
@@ -102,5 +104,4 @@ export default {
 div {
 
 }
-
 </style>

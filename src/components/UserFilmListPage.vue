@@ -1,9 +1,11 @@
 <template>
-   <div class="min-h-[736px] ">
-     <div class="container mx-auto tablet:pb-[74px] h-full min-h-[736px]">
+   <div class="min-h-screen ">
+     <div class="container mx-auto tablet:pb-[74px] bg-white h-full">
+       <AppHeader>
+       </AppHeader>
        <div class="flex gap-10 mt-10 flex-col h-full">
-         <div class="flex row justify-between">
-           <div class="flex gap-4 justify-between items-center">
+         <div class="flex row justify-between tablet:justify-end">
+           <div class="flex tablet:hidden  gap-4 justify-between items-center">
              <img class="h-6 w-6" src="../assets/img/litterM-home.png">
              <span class="text-2xl font-bold">My List</span>
            </div>
@@ -26,14 +28,14 @@
          <div v-if="!addedFilms" class="m-auto relative bottom-10">
            <img src="../assets/img/tablets.jpg" class="w-full h-full object-cover" />
          </div>
-         <div v-if="addedFilms" class="grid row h-full grid-cols-2 items-start gap-3 justify-items-center">
+         <div v-if="addedFilms" class="grid row grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start gap-4 justify-items-center">
            <div
              @click="$router.push({ path: '/film/' + item.kinopoiskId })"
              v-for="(item,index) in addedFilmsSortByName"
              :key="index"
              class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
            >
-             <div class="max-w-[200px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full">
+             <div class="film-card">
                <img
                  :src="item.posterUrl"
                  alt="film card"
@@ -56,11 +58,12 @@
 
 <script>
 
+import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import {useStorage} from "@vueuse/core";
 
 export default {
-  components: {AppIcon},
+  components: {AppIcon,AppHeader},
   name: "UserFilmList",
   data() {
     return {
@@ -95,5 +98,7 @@ export default {
 
 <style scoped>
 
-
+div {
+  border: 1px solid red;
+}
 </style>

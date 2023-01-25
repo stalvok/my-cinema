@@ -1,7 +1,7 @@
 <template>
   <carousel :items-to-show="itemsToShow">
     <slide v-for="(item) in filmsSlice" :key="item">
-      <div class="overflow-hidden rounded-3xl relative h-[200px] w-[140px] lg:w-[200px] lg:h-[280px]">
+      <div class="overflow-hidden rounded-3xl relative h-[200px] w-[140px] lg:w-[200px] lg:h-[300px]">
           <img
             @click="$router.push({ path: '/film/' + item.filmId})"
             :src="item.posterUrlPreview"
