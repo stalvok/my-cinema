@@ -1,31 +1,44 @@
 <template>
-  <div class="min-h-[736px] flex flex-col">
+  <div class="min-h-screen flex flex-col">
     <div class="container tablet:pb-[74px] h-full bg-white mx-auto">
-      <PageLoader v-show="!loaderTimer"/>
-      <div class="flex flex-col mt-6  row gap-6">
-        <div class="relative text-[#9E9E9E] flex items-center w-full">
+      <AppHeader>
+        Explore
+      </AppHeader>
+      <div class="w-full mt-6 row flex items-center justify-between">
+        <div class="flex tablet:hidden gap-4 items-center">
           <AppIcon
-            name="search"
-            class="w-6 mr-4 right-0 cursor-pointer h-6 absolute"
-            @click="fetchFilms()"
+            @click="$router.go(-1)"
+            name="vector"
+            class="w-6 h-6 cursor-pointer"
           />
+          <div class="text-2xl font-bold">Popular Films</div>
+        </div>
+      </div>
+      <PageLoader v-show="!loaderTimer"/>
+      <div class="flex flex-col mt-6 row gap-6">
+        <div class="relative text-[#9E9E9E] justify-end flex gap-6 items-center w-full">
           <input
             type="text"
             v-model="inputValue"
             @keyup.enter="fetchFilms()"
             placeholder="Search"
-            class="w-full pl-4 h-12"
+            class="pl-4 w-full tablet:w-[268px] h-12"
           >
+          <AppIcon
+            name="search"
+            class="w-8 h-8 cursor-pointer"
+            @click="fetchFilms()"
+          />
         </div>
-        <div class="grid grid-cols-2 items-start  gap-3 justify-items-center">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-start gap-3 justify-items-center">
           <div
-            @click="$router.push({ path: '/film/' + item.filmId || item.kinopoiskId})"
             v-for="(item,index) in searchedFilm.items || searchedFilm.films"
             :key="index"
             class="flex cursor-pointer flex-col gap-2 items-center justify-center w-full"
           >
-            <div class="max-w-[200px] bg-blue-400 overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full">
+            <div class="film-card">
               <img
+                @click="$router.push({ path: '/film/' + (item.filmId || item.kinopoiskId)})"
                 :src="item.posterUrl"
                 alt="film card"
                 class="w-full h-full"
@@ -41,12 +54,13 @@
 
 <script>
 
+import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 
 export default {
   name: "explorePage",
-  components: {AppIcon,PageLoader},
+  components: {AppIcon,PageLoader,AppHeader},
   data() {
     return {
       searchedFilm: '',
@@ -90,5 +104,4 @@ export default {
 div {
 
 }
-
 </style>

@@ -15,8 +15,8 @@ export default createRouter( {
   linkActiveClass: 'active-link',
   linkExactActiveClass: 'exact-active-link',
   routes: [
-    {path: '/',component: WelcomePage,  },
-    {path: '/login',component: LoginPage, },
+    {path: '/',component: WelcomePage,},
+    {path: '/login',component: LoginPage,},
     {path: '/home',component: HomePage ,meta:{layout: 'mobile-layout'}},
     {path: '/releases',component: ReleasesPage ,meta:{layout: 'mobile-layout'}},
     {path: '/popular-films',component: PopularFilms ,meta:{layout: 'mobile-layout'}},

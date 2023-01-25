@@ -4,11 +4,14 @@
       v-if="currentFilm !== ''"
       class="container tablet:pb-[74px] bg-white mx-auto"
     >
-      <div class="flex flex-col gap-4 sm:flex-row">
-        <div class="relative flex h-[568px] justify-center w-full">
+      <AppHeader>
+        Film
+      </AppHeader>
+      <div class="flex flex-col sm:mt-8 gap-4 sm:flex-row">
+        <div class="flex relative flex-1 h-[568px] justify-center w-full">
           <div class="relative">
             <img
-              class="object-cover h-full w-full drop-shadow-xl "
+              class="object-cover h-full w-full drop-shadow-xl"
               :src="currentFilm.posterUrl" alt="film poster"
             >
             <AppIcon
@@ -23,9 +26,9 @@
             />
           </div>
         </div>
-        <div class="flex flex-col gap-4 row sm:flex-row items-start justify-center">
-          <div class="text-3xl font-bold">{{ currentFilm.nameOriginal }}</div>
-          <div class="italic">"{{ currentFilm.slogan ? currentFilm.slogan : 'The film has no slogan'}}"</div>
+        <div class="flex flex-col flex-1 gap-4 row items-start justify-center sm:justify-start">
+          <div class="text-3xl sm:text-5xl font-bold">{{ currentFilm.nameOriginal }}</div>
+          <div class="italic text-base sm:text-xl">"{{ currentFilm.slogan ? currentFilm.slogan : 'The film has no slogan'}}"</div>
           <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
             <div v-if="currentFilm.ratingMpaa" class="button cursor-default uppercase outline is-link-active is-exact-active is-small">
               {{ currentFilm.ratingMpaa  }}
@@ -59,11 +62,12 @@
               </div>
             </div>
           </div>
+          <div>{{currentFilm.countries.country}}</div>
           <div>
-            <div v-if="!longText">{{ description }}...
+            <div class="text-base sm:text-xl" v-if="!longText">{{ description }}...
               <span class="text-red text-lg cursor-pointer font-semibold" @click="longText=!longText">View more</span>
             </div>
-            <div v-if="longText">{{ currentFilm.description }}
+            <div class="text-base sm:text-xl" v-if="longText">{{ currentFilm.description }}
               <span class="text-red text-lg cursor-pointer font-semibold" @click="longText=!longText">
                Hide
                <AppIcon name="vector" class="w-3 inline-block h-3 text-red rotate-90"/>
@@ -83,12 +87,13 @@
 
 <script>
 
+import AppHeader from "./AppHeader.vue";
 import FilmParameters from "./FilmParameters.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 import { useStorage } from '@vueuse/core';
 export default {
-  components: {AppIcon,FilmParameters,PageLoader},
+  components: {AppIcon,FilmParameters,PageLoader,AppHeader},
   name: "FilmPage",
   data() {
     return {
@@ -123,7 +128,6 @@ export default {
   },
   async mounted() {
     await this.fetchFilm()
-    console.log(this.currentFilm.ratingMpaa)
 
   },
   watch: {
@@ -133,3 +137,10 @@ export default {
   },
 }
 </script>
+<style>
+
+div {
+  border: 1px solid red;
+}
+
+</style>

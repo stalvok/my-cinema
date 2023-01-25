@@ -1,16 +1,18 @@
 <template>
-    <div class="w-full h-full">
-      <div class="container mx-auto">
-        <div class="flex flex-col gap-10 h-full mt-10 row">
-          <div class="flex justify-between">
+
+      <div class="container min-h-screen bg-white mx-auto">
+        <AppHeader>
+          Profile
+        </AppHeader>
+        <div class="flex flex-col tablet:flex-row gap-10 h-full mt-10 row">
+          <div class="tablet:hidden flex justify-between">
             <div class="flex gap-10 justify-between items-center">
               <img class="h-6 w-6" src="../assets/img/litterM-home.png">
               <span class="text-2xl font-bold">My Profile</span>
             </div>
-            <AppIcon name="search" class="h-full w-8"/>
           </div>
-          <div class="flex flex-col gap-2 items-center">
-            <div class="h-[120px] w-[120px]">
+          <div class="flex flex-[2_2_0%] flex-col gap-2 items-center">
+            <div class="h-[120px] w-[120px] md:h-[180px] md:w-[180px] lg:h-[240px] lg:w-[240px]">
               <img
                 :src="profileImg || 'https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png'"
                 class="w-full h-full object-cover rounded-full"
@@ -21,7 +23,7 @@
             <div>{{sex}}</div>
             <div>{{email}}</div>
           </div>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-1 flex-col gap-2">
             <div class="flex items-center justify-between font-semibold">
               <router-link
                 to="/profile-edit"
@@ -37,17 +39,17 @@
           </div>
         </div>
       </div>
-    </div>
+
 </template>
 
 <script>
 
 import AppIcon from "./AppIcon.vue";
-
+import AppHeader from "./AppHeader.vue";
 
 
 export default {
-  components:{AppIcon},
+  components:{AppIcon,AppHeader},
   name: "ProfilePage",
   data() {
     return {

@@ -5,23 +5,23 @@
       <div @click="changeCategorySameFilms" :class="{'text-red underline underline-offset-8': selectSameFilms}" class="duration-300 cursor-pointer">More Like This</div>
       <div @click="changeCategoryselect" :class="{'text-red underline underline-offset-8': selectFilmActors}" class="duration-300 cursor-pointer">Cast</div>
     </div>
-    <div v-show="selectSameFilms" class="w-full grid grid-cols-2 gap-3 justify-items-center">
+    <div v-show="selectSameFilms" class="w-full grid grid-cols-2 items-start gap-4 justify-items-center">
       <div v-if="sameFilms.length === 0" class="text-xl inline col-span-full" >
         No similar films have been found
       </div>
-
       <router-link
         v-for="(item) in sameFilms"
         :to="'/film/' + item.filmId"
         @clicK="this.$router.reload()"
         :key="item"
-        class="bg-blue-400 cursor-pointer overflow-hidden drop-shadow-lg rounded-3xl relative h-[240px] w-full"
+        class="drop-shadow-lg w-auto h-auto max-w-[200px]"
       >
-        <img
-          :src="item.posterUrlPreview"
-          alt="film card"
-          class="w-full h-full"
-        >
+          <img
+            :src="item.posterUrlPreview"
+            alt="film card"
+            class="w-full rounded-2xl object-cover h-full"
+          >
+        <div class="font-semibold text-center">{{item.nameRu}}</div>
       </router-link>
     </div>
     <div v-show="selectFilmAwards" class="flex flex-col">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div v-show="selectFilmActors">
-      <div class="flex flex-col row  gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div v-for="item in filmActors" class="flex gap-4">
           <div class="w-[90px] h-[140px]">
             <img

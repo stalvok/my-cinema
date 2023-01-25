@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-y-scroll w-full h-full">
+  <div class="overflow-y-scroll  w-full h-full">
     <slot/>
   </div>
   <MobileNavigation class="sticky bottom-0"/>
