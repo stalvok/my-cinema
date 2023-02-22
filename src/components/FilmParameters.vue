@@ -1,6 +1,6 @@
 <template>
   <div class="flex mb-4 flex-col gap-4">
-    <div class="flex text-lg font-medium text-slate-400 justify-around">
+    <div class="flex text-lg tablet:text-xl lg:text-2xl font-medium text-slate-400 justify-around">
       <div @click="changeCategoryAwards" :class="{'text-red underline underline-offset-8': selectFilmAwards}" class="duration-300 cursor-pointer">Awards</div>
       <div @click="changeCategorySameFilms" :class="{'text-red underline underline-offset-8': selectSameFilms}" class="duration-300 cursor-pointer">More Like This</div>
       <div @click="changeCategoryselect" :class="{'text-red underline underline-offset-8': selectFilmActors}" class="duration-300 cursor-pointer">Cast</div>
@@ -16,12 +16,12 @@
         :key="item"
         class="drop-shadow-lg w-auto h-auto max-w-[200px]"
       >
-          <img
-            :src="item.posterUrlPreview"
-            alt="film card"
-            class="w-full rounded-2xl object-cover h-full"
-          >
-        <div class="font-semibold text-center">{{item.nameRu}}</div>
+        <img
+          :src="item.posterUrlPreview"
+          alt="film card"
+          class="w-full rounded-2xl object-cover h-full"
+        >
+        <div class="font-semibold text-center">{{ item.nameRu }}</div>
       </router-link>
     </div>
     <div v-show="selectFilmAwards" class="flex flex-col">
@@ -30,22 +30,25 @@
       </div>
       <div class="flex flex-col gap-4">
         <div v-for="(item) in filmAwards" class="flex flex-col" key="item">
-          <div class="text-lg font-semibold">{{item.name}}</div>
-          <div>{{item.nominationName}} в {{item.year}} году</div>
+          <div class="text-lg tablet:text-xl font-semibold">{{item.name}}</div>
+          <div class="text-base tablet:text-lg">{{item.nominationName}} в {{item.year}} году</div>
         </div>
       </div>
     </div>
     <div v-show="selectFilmActors">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div v-for="item in filmActors" class="flex gap-4">
-          <div class="w-[90px] h-[140px]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div
+          v-for="item in filmActors"
+          class="flex justify-between gap-4"
+        >
+          <div class="flex-1 object-cover">
             <img
-              class="w-full drop-shadow-2xl rounded-xl h-full"
+              class="w-full drop-shadow-xl rounded-xl h-full"
               :src="item.posterUrl"
               alt="actor-photo"
             >
           </div>
-          <div class="flex flex-col">
+          <div class="flex-1 flex flex-col">
             <div class="text-lg font-semibold">{{item.description}}</div>
               <div>{{item.nameEn}}</div>
               <div>{{item.professionKey}}</div>
@@ -58,7 +61,7 @@
 
 <script>
 
-
+import {getFilms} from "../api/filmFetch.js";
 export default {
   components: {},
   name: "FilmParameters",
@@ -88,35 +91,17 @@ export default {
       this.selectSameFilms = false
       this.selectFilmActors = true
     },
-    async getSameFilms() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/similars`, {
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(json => this.sameFilms = json.items)
+     getSameFilms() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/similars`)
+        .then(data => this.sameFilms = data.items)
     },
-    async getFilmAwards() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/awards`, {
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(json => this.filmAwards = json.items)
+     getFilmAwards() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$props.filmId}/awards`)
+        .then(data => this.filmAwards = data.items)
     },
-    async getFilmActors() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v1/staff?filmId=${this.$props.filmId}`, {
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(json => this.filmActors = json.slice(0,20))
+     getFilmActors() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v1/staff?filmId=${this.$props.filmId}`)
+        .then(data => this.filmActors = data.slice(0,20))
     },
   },
   props: {
@@ -133,5 +118,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

@@ -79,7 +79,7 @@
     }
   }
   .active-link {
-    @apply text-red fill-red;
+    @apply text-red fill-red font-bold;
     & svg {
       @apply stroke-red;
     }

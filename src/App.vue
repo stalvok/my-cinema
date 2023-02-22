@@ -1,5 +1,4 @@
 <template>
-
   <component  :is="layout">
     <router-view class="bg-[#F4F4F4]"/>
   </component>

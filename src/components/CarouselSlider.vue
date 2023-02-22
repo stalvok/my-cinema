@@ -15,7 +15,7 @@
 
 <script>
 
-import { defineComponent } from 'vue'
+import { getFilms } from "../api/filmFetch.js";
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
@@ -36,30 +36,18 @@ export default  {
     }
   },
   methods: {
-    async getPopularFilms() {
-        await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1`,{
-          headers: {
-            'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-            'Content-Type': 'application/json',
-          },
-        })
-          .then(res => res.json())
-          .then(json => this.filmsArray = json.films)
+     getPopularFilms() {
+      getFilms('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1')
+        .then(data => this.filmsArray = data.films)
     },
-    async getNewRelease() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=DECEMBER`,{
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-          .then(res => res.json())
-          .then(json => this.filmsArray = json.items.map(film => {
-            return {
-              filmId: film.kinopoiskId,
-              ...film
-            }
-          }))
+     getNewRelease() {
+       getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=FEBRUARY`)
+         .then(data => this.filmsArray = data.items.map(film => {
+           return {
+             filmId: film.kinopoiskId,
+             ...film
+           }
+         }))
     },
   },
   computed: {

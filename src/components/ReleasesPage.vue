@@ -41,6 +41,7 @@
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 import AppHeader from "./AppHeader.vue";
+import {getFilms} from "../api/filmFetch.js";
 
 export default {
   components: {AppHeader, AppIcon,PageLoader},
@@ -52,15 +53,9 @@ export default {
     }
   },
   methods: {
-    async getNewRelease() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=DECEMBER`,{
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(json => this.filmsArray = json)
+     getNewRelease() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/premieres?year=2022&month=DECEMBER`)
+        .then(data => this.filmsArray = data)
     }
   },
   async mounted() {

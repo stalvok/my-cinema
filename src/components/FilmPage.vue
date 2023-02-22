@@ -7,16 +7,16 @@
       <AppHeader>
         Film
       </AppHeader>
-      <div class="flex flex-col sm:mt-8 gap-4 sm:flex-row">
-        <div class="flex relative flex-1 h-[568px] justify-center w-full">
+      <div class="flex flex-col tablet:mt-8 tablet:row gap-4 sm:flex-row">
+        <div class="flex relative flex-1 h-full justify-center w-full">
           <div class="relative">
             <img
-              class="object-cover h-full w-full drop-shadow-xl"
+              class="object-cover rounded-b-2xl tablet:rounded-2xl h-full w-full drop-shadow-xl"
               :src="currentFilm.posterUrl" alt="film poster"
             >
             <AppIcon
               name="vector"
-              class="ml-6 mt-4 w-8 h-8 border-0 absolute left-0 top-0 text-white bg-red p-1.5 rounded-full cursor-pointer"
+              class="ml-6 mt-4 w-8 h-8 tablet:hidden block absolute left-0 top-0 text-white bg-red p-1.5 rounded-full cursor-pointer"
               @click="this.$router.go(-1)"
             />
             <AppIcon
@@ -26,7 +26,7 @@
             />
           </div>
         </div>
-        <div class="flex flex-col flex-1 gap-4 row items-start justify-center sm:justify-start">
+        <div class="flex flex-col flex-1 row lg:flex-[2_2_0%] gap-4 items-start justify-center sm:justify-start">
           <div class="text-3xl sm:text-5xl font-bold">{{ currentFilm.nameOriginal }}</div>
           <div class="italic text-base sm:text-xl">"{{ currentFilm.slogan ? currentFilm.slogan : 'The film has no slogan'}}"</div>
           <div class="flex items-center flex-wrap gap-x-4 gap-y-1">
@@ -91,6 +91,7 @@ import AppHeader from "./AppHeader.vue";
 import FilmParameters from "./FilmParameters.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
+import {getFilms} from "../api/filmFetch.js";
 import { useStorage } from '@vueuse/core';
 export default {
   components: {AppIcon,FilmParameters,PageLoader,AppHeader},
@@ -104,18 +105,18 @@ export default {
     }
   },
   methods: {
-    async fetchFilm() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$route.params.id}`,{
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(res => res.json())
-        .then(json => this.currentFilm = json)
+     fetchFilm() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${this.$route.params.id}`)
+        .then(data => this.currentFilm = data)
     },
     addFilmToList(){
-      this.state.films.push(this.currentFilm)
+       if(this.state.films.find(item => item.kinopoiskId === this.currentFilm.kinopoiskId)) {
+         alert('такой уже фильм есть')
+       }
+       else {
+         console.log('такого фильма нет')
+         this.state.films.push(this.currentFilm)
+       }
     }
   },
   computed: {
@@ -137,5 +138,8 @@ export default {
   },
 }
 </script>
+
+
+
 <style scoped>
 </style>

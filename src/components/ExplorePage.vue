@@ -57,6 +57,7 @@
 import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
+import { getFilms } from "../api/filmFetch.js";
 
 export default {
   name: "explorePage",
@@ -69,25 +70,13 @@ export default {
     }
   },
   methods: {
-    async fetchFilms() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films?order=RATING&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000&keyword=${this.inputValue }&page=1`, {
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-          .then(res => res.json())
-          .then(json => this.searchedFilm = json)
+    fetchFilms() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films?order=RATING&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000&keyword=${this.inputValue}&page=1`,)
+        .then(data => this.searchedFilm = data)
     },
-    async fetchTopFilms() {
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1`, {
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-          .then(res => res.json())
-          .then(json => this.searchedFilm = json)
+     fetchTopFilms() {
+      getFilms('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1',)
+        .then(data => this.searchedFilm = data)
     }
   },
   async mounted() {
@@ -97,6 +86,7 @@ export default {
     } ,600)
   },
 }
+
 </script>
 
 <style scoped>

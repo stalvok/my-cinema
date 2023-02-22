@@ -1,5 +1,5 @@
 <template>
-  <header class="hidden bg-[#5D6065] tablet:flex relative justify-between items-center row w-full h-20">
+  <header class="hidden bg-neutral-300 tablet:flex relative justify-between items-center row w-full h-20">
     <div class="flex gap-4 items-center">
       <img
         class="h-10 w-10"

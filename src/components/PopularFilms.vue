@@ -43,6 +43,7 @@
 import AppHeader from "./AppHeader.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
+import {getFilms} from "../api/filmFetch.js";
 
 export default {
   components: {AppHeader, AppIcon,PageLoader},
@@ -54,17 +55,9 @@ export default {
     }
   },
   methods: {
-    async getNewRelease() {
-
-      await fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1`,{
-        headers: {
-          'X-API-KEY': 'cb8f0126-a908-4e5c-a76d-71403d99bfbd',
-          'Content-Type': 'application/json',
-        },
-      })
-          .then(res => res.json())
-          .then(json => this.filmsArray = json)
-      console.log(this.filmsArray)
+     getNewRelease() {
+      getFilms(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1`)
+        .then(data => this.filmsArray = data)
     }
   },
   async mounted() {

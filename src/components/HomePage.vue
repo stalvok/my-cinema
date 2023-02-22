@@ -40,6 +40,7 @@ import CarouselSlider from "./CarouselSlider.vue";
 import AppIcon from "./AppIcon.vue";
 import PageLoader from "./PageLoader.vue";
 
+
 export default {
   name: 'HomePage',
   components: {AppIcon, CarouselSlider,PageLoader,AppHeader},

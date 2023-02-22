@@ -46,6 +46,7 @@ import AppIcon from "./AppIcon.vue";
 import AppHeader from "./AppHeader.vue";
 
 
+
 export default {
   components:{AppIcon,AppHeader},
   name: "ProfilePage",
@@ -59,15 +60,12 @@ export default {
     }
   },
   mounted() {
-   console.log(this.storage)
     if (!this.storage) {
-      console.log(1)
       this.email = 'enter your email'
       this.name = 'enter your name'
       this.sex = 'MALE'
       this.profileImg = 'https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png'
     } else {
-      console.log(this.storage.email)
       this.email = this.storage.email  || 'enter your email'
       this.name = this.storage.name || 'enter your name'
       this.sex = this.storage.sex || 'MALE'
@@ -84,4 +82,7 @@ export default {
 </script>
 
 <style scoped>
+div {
+  border: 1px solid red;
+}
 </style>
